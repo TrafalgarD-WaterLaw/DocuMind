@@ -1,0 +1,6005 @@
+{
+ "_说明": "程序化生成的扩展评测集（gen_dataset.py）——Q-to-Q 链路自检",
+ "cases": [
+  {
+   "id": "auto-000",
+   "query": "云纹长蹄足鼎出土于哪个墓葬？",
+   "expected_sources": [
+    "青铜-云纹长蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-001",
+   "query": "卷首铜刀被折断后陪葬的现象与哪种丧葬习俗有关？",
+   "expected_sources": [
+    "河南博物院-卷首铜刀"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-002",
+   "query": "子媚鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-子媚鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-003",
+   "query": "四鸟扁足方鼎现在藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-四鸟扁足方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-004",
+   "query": "变形龙纹鼎出土于哪个墓葬？",
+   "expected_sources": [
+    "青铜-变形龙纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-005",
+   "query": "亡智鼎的原名是什么？",
+   "expected_sources": [
+    "青铜-亡智鼎（原名梁十九年鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-006",
+   "query": "串鼎是哪个时代的文物？",
+   "expected_sources": [
+    "青铜-串鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-007",
+   "query": "꼂鼎（疑鼎）现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-꼂鼎（疑鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-008",
+   "query": "□仲鼎属于什么器物类型？",
+   "expected_sources": [
+    "青铜-□仲鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-009",
+   "query": "𫑤公湯鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-𫑤公湯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-010",
+   "query": "穆公鼎属于哪种器类？",
+   "expected_sources": [
+    "青铜-穆公鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-011",
+   "query": "导卫从卫男石俑的《每周一品》栏目电子邮箱是什么？",
+   "expected_sources": [
+    "河南博物院-导卫从卫男石俑"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-012",
+   "query": "妇好墓玉龙的‘蛇说’中，闻一多在《伏羲考》里认为龙是什么？",
+   "expected_sources": [
+    "河南博物院-妇好墓玉龙"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-013",
+   "query": "七年趞曹鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-七年趞曹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-014",
+   "query": "叔淠父鼎是什么朝代的？",
+   "expected_sources": [
+    "青铜-叔淠父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-015",
+   "query": "后母姒康鼎还有哪些别名？",
+   "expected_sources": [
+    "青铜-后母姒康鼎（司母康方鼎，女康鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-016",
+   "query": "鄭子石鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-鄭子石鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-017",
+   "query": "𫿌鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-𫿌鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-018",
+   "query": "唐代黑釉双龙柄尊可能产自哪个窑口？",
+   "expected_sources": [
+    "河南博物院-唐代黑釉双龙柄尊"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-019",
+   "query": "셈父丁鼎属于什么类型的器物？",
+   "expected_sources": [
+    "青铜-셈父丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-020",
+   "query": "冊񄵲竹父乙鼎属于什么类型的器物？",
+   "expected_sources": [
+    "青铜-冊񄵲竹父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-021",
+   "query": "껠甘귕鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-껠甘귕鼎（旤甘귕鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-022",
+   "query": "秦公鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-秦公鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-023",
+   "query": "叔鼎（乖叔鼎）是什么时期出土的？",
+   "expected_sources": [
+    "青铜-叔鼎（乖叔鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-024",
+   "query": "聑숽父乙鼎是什么时代的？",
+   "expected_sources": [
+    "青铜-聑숽父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-025",
+   "query": "𪟹父乙鼎是哪个时代的器物？",
+   "expected_sources": [
+    "青铜-𪟹父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-026",
+   "query": "子翌鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-子翌鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-027",
+   "query": "宣德青花盘的大小盘底有什么不同？",
+   "expected_sources": [
+    "宣德-青花盘"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-028",
+   "query": "伯鼎乙是什么时期的器物？",
+   "expected_sources": [
+    "青铜-伯鼎乙"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-029",
+   "query": "窃曲垂鳞纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-窃曲垂鳞纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-030",
+   "query": "旁鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-旁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-031",
+   "query": "子申父己鼎是哪个历史时期的青铜器？",
+   "expected_sources": [
+    "青铜-子申父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-032",
+   "query": "伯筍父鼎属于什么材质的青铜器吗？",
+   "expected_sources": [
+    "青铜-伯筍父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-033",
+   "query": "叔□父鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-叔□父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-034",
+   "query": "散伯車父鼎丙是什么材质的器物？",
+   "expected_sources": [
+    "青铜-散伯車父鼎丙"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-035",
+   "query": "串父辛鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-串父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-036",
+   "query": "一觳鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-一觳鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-037",
+   "query": "波状纹鼎是在哪里出土的？",
+   "expected_sources": [
+    "青铜-波状纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-038",
+   "query": "不栺鼎出土于哪个墓地？",
+   "expected_sources": [
+    "青铜-不栺鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-039",
+   "query": "曾者子鼎是哪个朝代的器物？",
+   "expected_sources": [
+    "青铜-曾者子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-040",
+   "query": "春成孺子鼎属于什么类型的器物？",
+   "expected_sources": [
+    "青铜-春成孺子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-041",
+   "query": "𬓦干己鼎属于什么类别的文物？",
+   "expected_sources": [
+    "青铜-𬓦干己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-042",
+   "query": "夸鼎是战国时期的器物吗？",
+   "expected_sources": [
+    "青铜-夸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-043",
+   "query": "汉绿釉人形柱陶楼的《每周一品》栏目电子邮箱是什么？",
+   "expected_sources": [
+    "河南博物院-汉绿釉人形柱陶楼"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-044",
+   "query": "萯陽鼎是什么朝代的青铜器？",
+   "expected_sources": [
+    "青铜-萯陽鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-045",
+   "query": "鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-鼎（方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-046",
+   "query": "亞獸父己鼎出土于哪个墓葬？",
+   "expected_sources": [
+    "青铜-亞獸父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-047",
+   "query": "江小仲母生鼎属于哪一类器物？",
+   "expected_sources": [
+    "青铜-江小仲母生鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-048",
+   "query": "龙纹玉璜出土于哪个遗址？",
+   "expected_sources": [
+    "河南博物院-龙纹玉璜"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-049",
+   "query": "듾伯鼎（獨柱帶盤鼎）现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-듾伯鼎（獨柱帶盤鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-050",
+   "query": "射鼎属于什么类别的文物？",
+   "expected_sources": [
+    "青铜-射鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-051",
+   "query": "木祖辛父丙鼎属于哪个时代？",
+   "expected_sources": [
+    "青铜-木祖辛父丙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-052",
+   "query": "썠父辛鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-썠父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-053",
+   "query": "兽面纹附耳方鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-兽面纹附耳方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-054",
+   "query": "铜奔羊与卧羊灯在形态上有哪些相似之处？",
+   "expected_sources": [
+    "河南博物院-铜奔羊"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-055",
+   "query": "温邈墓志中记载温邈有几个儿子？",
+   "expected_sources": [
+    "河南博物院-温邈墓志"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-056",
+   "query": "史生鼎属于什么朝代的青铜器？",
+   "expected_sources": [
+    "青铜-史生鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-057",
+   "query": "宜陽鼎现在藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-宜陽鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-058",
+   "query": "洪武釉里红大盘的底足是平削的还是斜削的？",
+   "expected_sources": [
+    "洪武-釉里红大盘"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-059",
+   "query": "后母戊鼎现藏于哪里？",
+   "expected_sources": [
+    "青铜-后母戊鼎（司母戊方鼎，司母戊鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-060",
+   "query": "中񅒅王鼎这个名称中包含了哪个字？",
+   "expected_sources": [
+    "青铜-中񅒅王鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-061",
+   "query": "𬌗厨鼎（沬厨鼎）又叫什么名字？",
+   "expected_sources": [
+    "青铜-񅅠厨鼎（沬厨鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-062",
+   "query": "񅒼鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-񅒼鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-063",
+   "query": "臧氏鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-臧氏鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-064",
+   "query": "桋伯鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-桋伯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-065",
+   "query": "伯񅎒父鼎属于哪类器物？",
+   "expected_sources": [
+    "青铜-伯񅎒父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-066",
+   "query": "楷仲鼎属于哪个时代？",
+   "expected_sources": [
+    "青铜-楷仲鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-067",
+   "query": "曾子仲𫌿鼎的别名曾子仲誨鼎指的是同一件器物吗？",
+   "expected_sources": [
+    "青铜-曾子仲𫌿鼎（曾子仲誨鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-068",
+   "query": "卌二年逨鼎甲属于哪个朝代？",
+   "expected_sources": [
+    "青铜-卌二年逨鼎甲"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-069",
+   "query": "姚季鼎是什么时期的器物？",
+   "expected_sources": [
+    "青铜-姚季鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-070",
+   "query": "镶嵌绿松石兽面纹铜牌饰中提到的绿松石龙形器与墓主人的位置关系是怎样的？",
+   "expected_sources": [
+    "河南博物院-镶嵌绿松石兽面纹铜牌饰"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-071",
+   "query": "𰄄甘𦎫鼎是什么时代的？",
+   "expected_sources": [
+    "青铜-𰄄甘𦎫鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-072",
+   "query": "作父辛方鼎的器物类型是什么？",
+   "expected_sources": [
+    "青铜-作父辛方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-073",
+   "query": "黃季鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-黃季鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-074",
+   "query": "四联鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-四联鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-075",
+   "query": "余子끗鼎现藏于哪个机构？",
+   "expected_sources": [
+    "青铜-余子끗鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-076",
+   "query": "薳子受鼎现藏于哪个机构？",
+   "expected_sources": [
+    "青铜-薳子受鼎（子受鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-077",
+   "query": "波曲纹蹄足鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-波曲纹蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-078",
+   "query": "婦鼎（婦方鼎）是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-婦鼎（婦方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-079",
+   "query": "쁧鼎是在哪里出土的？",
+   "expected_sources": [
+    "青铜-쁧鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-080",
+   "query": "叔虞鼎是哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-叔虞鼎（叔夨鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-081",
+   "query": "德鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-德鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-082",
+   "query": "红绿釉陶灯中说明最早出现照明器具名称是在什么时期？",
+   "expected_sources": [
+    "河南博物院-红绿釉陶灯"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-083",
+   "query": "史鼎是哪个时期的青铜器？",
+   "expected_sources": [
+    "青铜-史鼎（史鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-084",
+   "query": "立鹿四足甗为什么说已经不仅仅局限于炊煮食物了？",
+   "expected_sources": [
+    "河南博物院-小子吉父方甗"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-085",
+   "query": "弔尹鼎（叔尹鼎）是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-弔尹鼎（叔尹鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-086",
+   "query": "王鼎是什么时期的器物？",
+   "expected_sources": [
+    "青铜-王鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-087",
+   "query": "姬牛母鼎属于什么类别的文物？",
+   "expected_sources": [
+    "青铜-姬牛母鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-088",
+   "query": "邴法敬造像碑资料中，隋代中国佛教有哪三个特点？",
+   "expected_sources": [
+    "河南博物院-邴法敬造像碑"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-089",
+   "query": "南方追孝鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-南方追孝鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-090",
+   "query": "셜鼎（网方鼎）是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-셜鼎（网方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-091",
+   "query": "弓𦎫父丁鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-弓𦎫父丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-092",
+   "query": "卧虎龙纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-卧虎龙纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-093",
+   "query": "鄉襾乙鼎（鄉乙宁鼎）的别名是什么？",
+   "expected_sources": [
+    "青铜-鄉襾乙鼎（鄉乙宁鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-094",
+   "query": "王伯鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-王伯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-095",
+   "query": "萬父庚鼎属于什么器物类别？",
+   "expected_sources": [
+    "青铜-萬父庚鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-096",
+   "query": "以鼎是哪个朝代的器物？",
+   "expected_sources": [
+    "青铜-以鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-097",
+   "query": "奪鼎属于什么材质或类别的器物？",
+   "expected_sources": [
+    "青铜-奪鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-098",
+   "query": "󈩽鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-󈩽鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-099",
+   "query": "西周圆涡纹鼎现在收藏在哪个机构？",
+   "expected_sources": [
+    "青铜-圆涡纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-100",
+   "query": "셈父癸鼎是哪个朝代的？",
+   "expected_sources": [
+    "青铜-셈父癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-101",
+   "query": "齊公去余鼎的朝代是隋代吗？",
+   "expected_sources": [
+    "青铜-齊公去余鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-102",
+   "query": "太師小子伯񅗉父鼎属于什么类别的器物？",
+   "expected_sources": [
+    "青铜-太師小子伯񅗉父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-103",
+   "query": "𣆪母鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-𣆪母鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-104",
+   "query": "笋鼎（荀鼎）属于什么材质？",
+   "expected_sources": [
+    "青铜-笋鼎（荀鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-105",
+   "query": "𢐗伯鼎乙是哪个时期的青铜器？",
+   "expected_sources": [
+    "青铜-𢐗伯鼎乙"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-106",
+   "query": "王子鼎（王子姪鼎）收藏于美国的哪所机构？",
+   "expected_sources": [
+    "青铜-王子鼎（王子姪鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-107",
+   "query": "朷鼎是什么时期出土的青铜器？",
+   "expected_sources": [
+    "青铜-朷鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-108",
+   "query": "叔矩鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-叔矩鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-109",
+   "query": "亞𬑂鼎是哪个朝代的器物？",
+   "expected_sources": [
+    "青铜-亞𬑂鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-110",
+   "query": "西周鏃鼎属于什么类别的文物？",
+   "expected_sources": [
+    "青铜-鏃鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-111",
+   "query": "遊孫癸鼎出土于哪个墓地？",
+   "expected_sources": [
+    "青铜-遊孫癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-112",
+   "query": "㠱母鼎属于哪个时期？",
+   "expected_sources": [
+    "青铜-㠱母鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-113",
+   "query": "山东长清孝堂山石祠堂的牛郎织女画像石描绘了什么？",
+   "expected_sources": [
+    "河南博物院-牛郎织女画像石"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-114",
+   "query": "云纹垂腹鼎的出土时间是什么时候？",
+   "expected_sources": [
+    "青铜-云纹垂腹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-115",
+   "query": "伯戠鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-伯戠鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-116",
+   "query": "伯鼎（伯乍井姬鼎）出土于什么时间？",
+   "expected_sources": [
+    "青铜-伯鼎（伯乍井姬鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-117",
+   "query": "穆父鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-穆父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-118",
+   "query": "𫲏鼎（周婦鼎）是哪个时期的器物？",
+   "expected_sources": [
+    "青铜-𫲏鼎（周婦鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-119",
+   "query": "西汉见日之光透光镜的《每周一品》栏目欢迎参与者做什么？",
+   "expected_sources": [
+    "河南博物院-西汉见日之光透光镜"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-120",
+   "query": "濫公鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-濫公鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-121",
+   "query": "涅鼎是什么时代的青铜器？",
+   "expected_sources": [
+    "青铜-涅鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-122",
+   "query": "𫯩鼎（大豕鼎）属于什么材质？",
+   "expected_sources": [
+    "青铜-𫯩鼎（大豕鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-123",
+   "query": "蝉纹蹄足鼎出土于哪个地点？",
+   "expected_sources": [
+    "青铜-蝉纹蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-124",
+   "query": "鮮父鼎是什么材质的器物？",
+   "expected_sources": [
+    "青铜-鮮父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-125",
+   "query": "堇鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-堇鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-126",
+   "query": "띅鼎（띅之行鼎）现在藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-띅鼎（띅之行鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-127",
+   "query": "永乐盘的造型继承了哪个瓶的式样？",
+   "expected_sources": [
+    "永乐-盘"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-128",
+   "query": "井鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-井鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-129",
+   "query": "鼎（無鼎）出土於哪一年？",
+   "expected_sources": [
+    "青铜-鼎（無鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-130",
+   "query": "妯子鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-妯子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-131",
+   "query": "񅓫子㐁車鼎（奚子宿車鼎）属于哪一类青铜器？",
+   "expected_sources": [
+    "青铜-񅓫子㐁車鼎（奚子宿車鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-132",
+   "query": "春秋󈱴鼎的朝代是什么？",
+   "expected_sources": [
+    "青铜-󈱴鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-133",
+   "query": "小子父己鼎现在收藏在什么地方？",
+   "expected_sources": [
+    "青铜-小子父己鼎（小子父己方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-134",
+   "query": "素面弦纹锥足鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-素面弦纹锥足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-135",
+   "query": "伯鮮鼎是在哪里出土的？",
+   "expected_sources": [
+    "青铜-伯鮮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-136",
+   "query": "至鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-至鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-137",
+   "query": "宣德洒蓝釉碗采用什么吹釉技法？",
+   "expected_sources": [
+    "宣德-洒蓝釉碗"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-138",
+   "query": "太祝禽鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-太祝禽鼎（大祝禽鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-139",
+   "query": "鄦奓魯生鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-鄦奓魯生鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-140",
+   "query": "兒鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-兒鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-141",
+   "query": "酉鼎属于什么器类？",
+   "expected_sources": [
+    "青铜-酉鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-142",
+   "query": "乳钉弦纹方鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-乳钉弦纹方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-143",
+   "query": "屮啓鼎是用什么材料制作的？",
+   "expected_sources": [
+    "青铜-屮啓鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-144",
+   "query": "𫯩鼎的另一个名称是什么？",
+   "expected_sources": [
+    "青铜-𫯩鼎（天豕鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-145",
+   "query": "𠮿父己鼎的名称中包含了哪两个人物称谓？",
+   "expected_sources": [
+    "青铜-񅠿父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-146",
+   "query": "𬀚叔樊鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-𬀚叔樊鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-147",
+   "query": "此鼎是什么时代的青铜器？",
+   "expected_sources": [
+    "青铜-此鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-148",
+   "query": "伯鼎（伯作鼎）现在收藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-伯鼎（伯作鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-149",
+   "query": "齊𬌯史喜鼎的名称中包含了哪个国名或族名？",
+   "expected_sources": [
+    "青铜-齊𬌯史喜鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-150",
+   "query": "鳥父甲鼎是哪个时期的青铜器？",
+   "expected_sources": [
+    "青铜-鳥父甲鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-151",
+   "query": "元代青花四方扁壶的胎色为什么不够洁白？",
+   "expected_sources": [
+    "元代-青花四方扁壶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-152",
+   "query": "春秋復鼎出土于哪个遗址的哪座墓葬？",
+   "expected_sources": [
+    "青铜-復鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-153",
+   "query": "賈鼎属于哪个历史时期？",
+   "expected_sources": [
+    "青铜-賈鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-154",
+   "query": "仿蓝瑛《暮山飞雪图》轴左上自识的内容是什么？",
+   "expected_sources": [
+    "河南博物院-仿蓝瑛《暮山飞雪图》轴"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-155",
+   "query": "云纹鼎现藏于哪个机构？",
+   "expected_sources": [
+    "青铜-云纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-156",
+   "query": "杞伯每亡鼎在知识片段中被标注为什么材质？",
+   "expected_sources": [
+    "青铜-杞伯每亡鼎（杞伯每刃鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-157",
+   "query": "師眉鼎属于青铜器还是其他材质的文物？",
+   "expected_sources": [
+    "青铜-師眉鼎（眉能王鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-158",
+   "query": "咸鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-咸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-159",
+   "query": "绿釉陶水榭中的亭式陶水榭在装饰风格上有什么特点？",
+   "expected_sources": [
+    "河南博物院-绿釉陶水榭"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-160",
+   "query": "唬皆君鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-唬皆君鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-161",
+   "query": "𬷌父丁鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-𬷌父丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-162",
+   "query": "句監鼎的另一个名称是什么？",
+   "expected_sources": [
+    "青铜-񄲸監鼎（句監鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-163",
+   "query": "rs鼎的出土時間和地點是什麼？",
+   "expected_sources": [
+    "青铜-rs鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-164",
+   "query": "許男鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-許男鼎（멎男鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-165",
+   "query": "鄢陵金代窖藏出土的瓷器后来是如何被追回的？",
+   "expected_sources": [
+    "河南博物院-钧窑天兰釉瓷盘"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-166",
+   "query": "鹿鼎（鹿方鼎）出土于哪个遗址的哪座墓葬？",
+   "expected_sources": [
+    "青铜-鹿鼎（鹿方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-167",
+   "query": "亞眢父己鼎的名称中包含了哪些信息？",
+   "expected_sources": [
+    "青铜-亞眢父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-168",
+   "query": "亞豚鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-亞豚鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-169",
+   "query": "蟠螭纹环钮鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-蟠螭纹环钮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-170",
+   "query": "닗叔信姬鼎是何时出土的？",
+   "expected_sources": [
+    "青铜-닗叔信姬鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-171",
+   "query": "作厥鼎现在藏于哪家博物馆？",
+   "expected_sources": [
+    "青铜-作厥鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-172",
+   "query": "女子丁鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-女子丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-173",
+   "query": "魯侯鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-魯侯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-174",
+   "query": "窃曲波曲纹蹄足鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-窃曲波曲纹蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-175",
+   "query": "卧牛钮鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-卧牛钮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-176",
+   "query": "齊姜鼎是哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-齊姜鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-177",
+   "query": "刖人守门方鼎出土于1976年宝鸡扶风县庄白一号西周铜器窖藏，现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-刖人守门方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-178",
+   "query": "庚兒鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-庚兒鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-179",
+   "query": "王子鼎属于哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-王子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-180",
+   "query": "此余王鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-此余王鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-181",
+   "query": "素面环钮鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-素面环钮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-182",
+   "query": "集󈩭鼎是宋代器物吗？",
+   "expected_sources": [
+    "青铜-集󈩭鼎（集腏鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-183",
+   "query": "臣辰썠冊父乙鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-臣辰썠冊父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-184",
+   "query": "西周亞奚鼎属于什么器类？",
+   "expected_sources": [
+    "青铜-亞奚鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-185",
+   "query": "圍鼎出土于河南省安阳市殷都区北蒙街道花园庄村商代墓葬的哪个位置？",
+   "expected_sources": [
+    "青铜-圍鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-186",
+   "query": "召叔鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-召叔鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-187",
+   "query": "许阿瞿画像石与马姜墓记相比，在铭文和画像上有哪些不同特点？",
+   "expected_sources": [
+    "河南博物院-许阿瞿画像石"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-188",
+   "query": "斗半升鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-斗半升鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-189",
+   "query": "元彧墓志中记载元彧有哪些品德和才能？",
+   "expected_sources": [
+    "河南博物院-元延明墓志"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-190",
+   "query": "렿鼎（롛鼎）现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-렿鼎（롛鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-191",
+   "query": "史𫭚鼎（史逨方鼎）的材质是什么？",
+   "expected_sources": [
+    "青铜-史񅕑鼎（史逨方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-192",
+   "query": "񅞴鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-񅞴鼎（舂鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-193",
+   "query": "宣德青花罐的口部有什么特征？",
+   "expected_sources": [
+    "宣德-青花罐"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-194",
+   "query": "河南博物院收藏的战国时期中原地区青铜带钩主要以什么造型为主？",
+   "expected_sources": [
+    "河南博物院-错金镶嵌带钩"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-195",
+   "query": "腰圆形绿釉诗文枕上的书法作品与哪位书法家的行书草书风格相似？",
+   "expected_sources": [
+    "河南博物院-腰圆形绿釉诗文枕"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-196",
+   "query": "史鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-史鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-197",
+   "query": "根据郭虚己墓志，颜真卿为什么愿意为郭虚己撰写墓志？",
+   "expected_sources": [
+    "河南博物院-郭虚己墓志"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-198",
+   "query": "宋陵石刻头像的参考文献中有哪些期刊文章？",
+   "expected_sources": [
+    "河南博物院-宋陵石刻头像"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-199",
+   "query": "戈鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-戈鼎（戈作寶鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-200",
+   "query": "𢌿壬鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-𢌿壬鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-201",
+   "query": "長𱪣會鼎是不是青铜器？",
+   "expected_sources": [
+    "青铜-長𪱣會鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-202",
+   "query": "告宁鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-告宁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-203",
+   "query": "子耳鼎的出土时间是什么时候？",
+   "expected_sources": [
+    "青铜-子耳鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-204",
+   "query": "許成鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-許成鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-205",
+   "query": "又䍩父己鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-又䍩父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-206",
+   "query": "𦑄父鼎属于什么类型的青铜器？",
+   "expected_sources": [
+    "青铜-𦑄父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-207",
+   "query": "亞댁鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-亞댁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-208",
+   "query": "쇚癸鼎是青铜材质的吗？",
+   "expected_sources": [
+    "青铜-쇚癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-209",
+   "query": "西周썏鼎是什么材质的器物？",
+   "expected_sources": [
+    "青铜-썏鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-210",
+   "query": "蟠螭纹兽钮撇蹄足鼎是什么时候出土的？",
+   "expected_sources": [
+    "青铜-蟠螭纹兽钮撇蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-211",
+   "query": "單鼎现在收藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-單鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-212",
+   "query": "蟠螭纹兽钮球腹鼎出土于什么地点？",
+   "expected_sources": [
+    "青铜-蟠螭纹兽钮球腹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-213",
+   "query": "疑鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-疑鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-214",
+   "query": "兽面纹柱足方鼎是在哪里出土的？",
+   "expected_sources": [
+    "青铜-兽面纹柱足方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-215",
+   "query": "三牺鼎现藏于哪个机构？",
+   "expected_sources": [
+    "青铜-三牺鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-216",
+   "query": "且鼎属于什么器物？",
+   "expected_sources": [
+    "青铜-且鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-217",
+   "query": "素面兽蹄足小口鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-素面兽蹄足小口鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-218",
+   "query": "曾姬無卹鼎属于什么类型的器物？",
+   "expected_sources": [
+    "青铜-曾姬無卹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-219",
+   "query": "窃曲环带纹鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-窃曲环带纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-220",
+   "query": "盅鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-盅鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-221",
+   "query": "虢季鼎辛是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-虢季鼎辛"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-222",
+   "query": "石辟邪的雕刻技法主要有哪些？",
+   "expected_sources": [
+    "河南博物院-石辟邪"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-223",
+   "query": "中山王믺鼎是在哪里出土的？",
+   "expected_sources": [
+    "青铜-中山王믺鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-224",
+   "query": "萧瑾墓志中关于考课制度的内容有哪些方面？",
+   "expected_sources": [
+    "河南博物院-萧瑾墓志"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-225",
+   "query": "甫母丁鼎是什么时期的器物？",
+   "expected_sources": [
+    "青铜-甫母丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-226",
+   "query": "新邑鼎的类别是什么？",
+   "expected_sources": [
+    "青铜-新邑鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-227",
+   "query": "云纹兽钮蹄足鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-云纹兽钮蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-228",
+   "query": "垂鳞纹桥钮鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-垂鳞纹桥钮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-229",
+   "query": "兽面纹锥状空足鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-兽面纹锥状空足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-230",
+   "query": "잫公숮鼎是什么时代的器物？",
+   "expected_sources": [
+    "青铜-잫公숮鼎（原稱豐公숮鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-231",
+   "query": "񄵑鼎是否属于青铜器？",
+   "expected_sources": [
+    "青铜-񄵑鼎（牧鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-232",
+   "query": "聑쀫婦살鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-聑쀫婦살鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-233",
+   "query": "交龙纹卵形鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-交龙纹卵形鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-234",
+   "query": "󈧂鼎（񂮾鼎）属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-󈧂鼎（񂮾鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-235",
+   "query": "公鼎（原名敔鼎）出土于哪里？",
+   "expected_sources": [
+    "青铜-公鼎（原名敔鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-236",
+   "query": "＿鼎出土自哪个遗址？",
+   "expected_sources": [
+    "青铜-＿鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-237",
+   "query": "薳子昃鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-薳子昃鼎（子昃鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-238",
+   "query": "宋代垣上官鼎是什么材质的？",
+   "expected_sources": [
+    "青铜-垣上官鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-239",
+   "query": "飞泉漱玉琴提到的“攻琴如参禅”与佛家哪个学说有关？",
+   "expected_sources": [
+    "河南博物院-飞泉漱玉琴"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-240",
+   "query": "西周羊酉父癸鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-羊酉父癸鼎（酋父癸鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-241",
+   "query": "뎶鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-뎶鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-242",
+   "query": "中小臣車鼎的完整名称是什么？",
+   "expected_sources": [
+    "青铜-中小臣車鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-243",
+   "query": "河南博物院藏珍珠地兔纹枕的尺寸是多少？",
+   "expected_sources": [
+    "河南博物院-白釉珍珠地划花梅瓶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-244",
+   "query": "龙纹撇锥足鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-龙纹撇锥足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-245",
+   "query": "七璜联珠组玉佩通常由哪些玉器部件组成？",
+   "expected_sources": [
+    "河南博物院-七璜联珠组玉佩"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-246",
+   "query": "七年曹鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-七年曹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-247",
+   "query": "吳王姬鼎的完整名称是什么？",
+   "expected_sources": [
+    "青铜-吳王姬鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-248",
+   "query": "作寶鼎的尺寸数据是多少？",
+   "expected_sources": [
+    "青铜-作寶鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-249",
+   "query": "疋未鼎是1984年从哪里出土的？",
+   "expected_sources": [
+    "青铜-疋未鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-250",
+   "query": "許男鼎属于哪一类器物？",
+   "expected_sources": [
+    "青铜-許男鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-251",
+   "query": "襾戈冊鼎（冊宁戈鼎）的材质是什么？",
+   "expected_sources": [
+    "青铜-襾戈冊鼎（冊宁戈鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-252",
+   "query": "卷云纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-卷云纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-253",
+   "query": "王蔑鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-王蔑鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-254",
+   "query": "绳纹陶甗的上部盛放食物的部分叫什么？",
+   "expected_sources": [
+    "河南博物院-编条纹黑陶甑"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-255",
+   "query": "西周作冊祝鼎现在收藏在哪个机构？",
+   "expected_sources": [
+    "青铜-作冊祝鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-256",
+   "query": "泈叔鼎是1980年在哪儿出土的？",
+   "expected_sources": [
+    "青铜-泈叔鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-257",
+   "query": "元代青花碗的底部圈足有什么特点？",
+   "expected_sources": [
+    "元代-青花碗"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-258",
+   "query": "父辛鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-259",
+   "query": "女心鼎（母心鼎）是青铜器吗？",
+   "expected_sources": [
+    "青铜-女心鼎（母心鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-260",
+   "query": "舍鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-舍鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-261",
+   "query": "宁戈冊鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-宁戈冊鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-262",
+   "query": "窃曲波曲纹粗蹄足鼎现在的尺寸是多少？",
+   "expected_sources": [
+    "青铜-窃曲波曲纹粗蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-263",
+   "query": "쁄祖丁鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-쁄祖丁鼎（倗祖丁）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-264",
+   "query": "豐公鼎是哪一年出土的？",
+   "expected_sources": [
+    "青铜-豐公鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-265",
+   "query": "伯牛父鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-伯牛父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-266",
+   "query": "兽面纹方鼎现在收藏在哪个机构？",
+   "expected_sources": [
+    "青铜-兽面纹方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-267",
+   "query": "乙亥父丁鼎还有哪些别名？",
+   "expected_sources": [
+    "青铜-尹光鼎（邐鼎、邐方鼎、乙亥父丁鼎、尹光方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-268",
+   "query": "叔尹鼎（叔尹作旅方鼎）现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-叔尹鼎（叔尹作旅方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-269",
+   "query": "缀玉瞑目的参考文献中是否包含了《虢国墓地的发现与研究》这本书？",
+   "expected_sources": [
+    "河南博物院-缀玉瞑目"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-270",
+   "query": "商代龜形銘鼎是在哪一年出土的？",
+   "expected_sources": [
+    "青铜-龜形銘鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-271",
+   "query": "董永故里有哪些不同的说法？",
+   "expected_sources": [
+    "河南博物院-董永卖身葬父图"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-272",
+   "query": "廿八年平安君鼎的出土時間和地點是什麼？",
+   "expected_sources": [
+    "青铜-廿八年平安君鼎（坪安君鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-273",
+   "query": "《荆钗记》中是如何描写三寸金莲的？",
+   "expected_sources": [
+    "河南博物院-绿绸绣花鞋"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-274",
+   "query": "关于白釉猴头埙的解读，河南博物院《每周一品》栏目会如何公布参与者的答案？",
+   "expected_sources": [
+    "河南博物院-白釉猴头埙"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-275",
+   "query": "蟠龙涡纹提链小口鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-蟠龙涡纹提链小口鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-276",
+   "query": "春秋鄧小仲鼎的名称中包含哪个人名？",
+   "expected_sources": [
+    "青铜-鄧小仲鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-277",
+   "query": "鳶鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-鳶鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-278",
+   "query": "伯陶鼎属于什么类型的器物？",
+   "expected_sources": [
+    "青铜-伯陶鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-279",
+   "query": "线刻纹天禄中提到的这类天禄造型在哪个时期重新流行？",
+   "expected_sources": [
+    "河南博物院-线刻纹天禄"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-280",
+   "query": "重父壬鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-重父壬鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-281",
+   "query": "洪武釉里红执壶的装饰纹样主要有哪些花卉？",
+   "expected_sources": [
+    "洪武-釉里红执壶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-282",
+   "query": "兽面云雷纹扁足鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-兽面云雷纹扁足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-283",
+   "query": "金缕玉衣的前身玉覆面最早出现于什么时候？",
+   "expected_sources": [
+    "河南博物院-金缕玉衣"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-284",
+   "query": "金凤纹帔坠的使用体现了明代哪些制度？",
+   "expected_sources": [
+    "河南博物院-金凤纹帔坠"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-285",
+   "query": "君鼎甲是什么朝代的？",
+   "expected_sources": [
+    "青铜-君鼎甲"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-286",
+   "query": "田父辛鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-田父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-287",
+   "query": "西周亞址鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-亞址鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-288",
+   "query": "圆涡弦纹鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-圆涡弦纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-289",
+   "query": "敬使君碑记载的武泰元年（公元528年）二月，胡太后毒死了哪位皇帝？",
+   "expected_sources": [
+    "河南博物院-敬使君碑"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-290",
+   "query": "洪武青花盘的底足刷白釉浆时薄处和厚处分别呈现什么颜色？",
+   "expected_sources": [
+    "洪武-青花盘"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-291",
+   "query": "秉父辛鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-秉父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-292",
+   "query": "顾首龙纹鼎是哪一年出土的？",
+   "expected_sources": [
+    "青铜-顾首龙纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-293",
+   "query": "弔父癸鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-弔父癸鼎（叔父癸鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-294",
+   "query": "天父己鼎所属的器类是什么？",
+   "expected_sources": [
+    "青铜-天父己鼎（大父己鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-295",
+   "query": "匡上官鼎是什么材质的？",
+   "expected_sources": [
+    "青铜-匡上官鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-296",
+   "query": "弓父癸鼎属于哪个历史时期？",
+   "expected_sources": [
+    "青铜-弓父癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-297",
+   "query": "命鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-命鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-298",
+   "query": "好鼎的名称中‘好’字怎么念？",
+   "expected_sources": [
+    "青铜-好鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-299",
+   "query": "王作仲姜鼎现在收藏在什么地方？",
+   "expected_sources": [
+    "青铜-王作仲姜鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-300",
+   "query": "亞긍鼎属于什么时期的器物？",
+   "expected_sources": [
+    "青铜-亞긍鼎（亞醜鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-301",
+   "query": "春秋山父丁鼎是什么类型的器物？",
+   "expected_sources": [
+    "青铜-山父丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-302",
+   "query": "芮太子鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-芮太子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-303",
+   "query": "샫父癸鼎属于什么类别的文物？",
+   "expected_sources": [
+    "青铜-샫父癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-304",
+   "query": "青玉人首蛇身饰是什么时期的玉器？",
+   "expected_sources": [
+    "河南博物院-青玉人首蛇身饰"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-305",
+   "query": "永乐卧壶的双系活环装饰在什么位置？",
+   "expected_sources": [
+    "永乐-卧壶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-306",
+   "query": "荊子鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-荊子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-307",
+   "query": "中陽王鼎（뉡昜王鼎）出土于哪里？",
+   "expected_sources": [
+    "青铜-中陽王鼎（뉡昜王鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-308",
+   "query": "青花云龙纹玉壶春瓶的器型玉壶春瓶多用作什么器？",
+   "expected_sources": [
+    "河南博物院-青花云龙纹玉壶春瓶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-309",
+   "query": "鼎（鼎，鼎）是哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-鼎（鼎，鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-310",
+   "query": "卷云纹蹄足环钮鼎出土于哪个遗址？",
+   "expected_sources": [
+    "青铜-卷云纹蹄足环钮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-311",
+   "query": "鄭虢叔安鼎属于什么类别的文物？",
+   "expected_sources": [
+    "青铜-鄭虢叔安鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-312",
+   "query": "𫡖鼎是什么时期的器物？",
+   "expected_sources": [
+    "青铜-𫡖鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-313",
+   "query": "亞댁鼎是西周时期的青铜器吗？",
+   "expected_sources": [
+    "青铜-亞댁鼎（冊命鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-314",
+   "query": "曾仲𰃘鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-曾仲𰃘鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-315",
+   "query": "金臂钏采用了哪些工艺技法制作而成？",
+   "expected_sources": [
+    "河南博物院-金臂钏"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-316",
+   "query": "四年昌國鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-四年昌國鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-317",
+   "query": "楚王鼎（隨仲嬭加鼎）还有哪个名称？",
+   "expected_sources": [
+    "青铜-楚王鼎（隨仲嬭加鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-318",
+   "query": "宀鼎属于哪一类文物？",
+   "expected_sources": [
+    "青铜-宀鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-319",
+   "query": "伯頵父鼎的完整名称是什么？",
+   "expected_sources": [
+    "青铜-伯頵父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-320",
+   "query": "𤕌鼎是什么时代的青铜器？",
+   "expected_sources": [
+    "青铜-𤕌鼎（紳鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-321",
+   "query": "귎鼎（솤鼎）是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-귎鼎（솤鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-322",
+   "query": "左使車工蔡鼎出土于哪个墓葬？",
+   "expected_sources": [
+    "青铜-左使車工蔡鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-323",
+   "query": "鮑子鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-鮑子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-324",
+   "query": "宣德炉的色泽有什么特点？",
+   "expected_sources": [
+    "宣德-香炉烛台"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-325",
+   "query": "屰鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-屰鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-326",
+   "query": "乃뤾子鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-乃뤾子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-327",
+   "query": "亞＿父辛鼎是什么时代的青铜器？",
+   "expected_sources": [
+    "青铜-亞＿父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-328",
+   "query": "񄼺鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-񄼺鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-329",
+   "query": "亚盉乙鼎属于哪类古代器物？",
+   "expected_sources": [
+    "青铜-亚盉乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-330",
+   "query": "乳钉纹方鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-乳钉纹方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-331",
+   "query": "񅑤鼎是用什么材质制作的？",
+   "expected_sources": [
+    "青铜-񅑤鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-332",
+   "query": "子䧅□之孫鼎的完整名称是什么？",
+   "expected_sources": [
+    "青铜-子䧅□之孫鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-333",
+   "query": "子𫑈鼎是哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-子𫑈鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-334",
+   "query": "南宮姬鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-南宮姬鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-335",
+   "query": "昜㜏鼎属于什么材质？",
+   "expected_sources": [
+    "青铜-昜㜏鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-336",
+   "query": "北單鼎是什么类型的文物？",
+   "expected_sources": [
+    "青铜-北單鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-337",
+   "query": "夫뵩申鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-夫뵩申鼎（夫뵩걕鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-338",
+   "query": "鄭莊公之孫𫊣鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-鄭莊公之孫𫊣鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-339",
+   "query": "𫤷登鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-𫤷登鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-340",
+   "query": "堇臨鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-堇臨鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-341",
+   "query": "白釉瓷围棋盘的墓主张盛为什么在正史中没有传记？",
+   "expected_sources": [
+    "河南博物院-白釉瓷围棋盘"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-342",
+   "query": "䣄賚尹朁鼎属于哪个朝代？",
+   "expected_sources": [
+    "青铜-䣄賚尹朁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-343",
+   "query": "春秋썠冊父辛鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-썠冊父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-344",
+   "query": "子父己鼎是什么年代的？",
+   "expected_sources": [
+    "青铜-子父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-345",
+   "query": "宝丰县清凉寺汝官窑遗址展示馆主要对哪些考古发掘遗迹进行保护和展示？",
+   "expected_sources": [
+    "河南博物院-汝窑天青釉盏托"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-346",
+   "query": "宣德白釉碗多见什么装饰手法？",
+   "expected_sources": [
+    "宣德-白釉碗"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-347",
+   "query": "成王鼎（成王方鼎）现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-成王鼎（成王方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-348",
+   "query": "亞긍父丁鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-亞긍父丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-349",
+   "query": "太保鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-太保鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-350",
+   "query": "𫦆鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-𫦆鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-351",
+   "query": "羊庚茲鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-羊庚茲鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-352",
+   "query": "競之羕鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-競之羕鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-353",
+   "query": "无档尊石榴尊的口和底是什么样的？",
+   "expected_sources": [
+    "永乐-无档尊石榴尊"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-354",
+   "query": "𫤷父己鼎属于什么时代？",
+   "expected_sources": [
+    "青铜-𫤷父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-355",
+   "query": "숱鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-숱鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-356",
+   "query": "伯□鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-伯□鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-357",
+   "query": "关于彩漆木雕镇墓兽的随葬和墓主联系，文中提出了什么问题？",
+   "expected_sources": [
+    "河南博物院-彩漆木雕镇墓兽"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-358",
+   "query": "楚王鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-楚王鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-359",
+   "query": "仲𫨺父鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-仲𫨺父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-360",
+   "query": "西周箙父庚鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-箙父庚鼎（父庚鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-361",
+   "query": "亞若癸鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-亞若癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-362",
+   "query": "林则徐行书轴中林则徐为防范外国侵略采取了哪些备战措施？",
+   "expected_sources": [
+    "河南博物院-林则徐行书轴"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-363",
+   "query": "師麻孝叔鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-師麻孝叔鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-364",
+   "query": "格公鼎的名称是什么？",
+   "expected_sources": [
+    "青铜-格公鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-365",
+   "query": "斜索戏车画像砖里说载竿表演的力量有多惊人？",
+   "expected_sources": [
+    "河南博物院-斜索戏车画像砖"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-366",
+   "query": "曾子󈨇鼎属于哪个朝代？",
+   "expected_sources": [
+    "青铜-曾子󈨇鼎（曾子斁鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-367",
+   "query": "南公有司憖鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-南公有司憖鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-368",
+   "query": "垂鼓腹凸弦纹矮锥足鼎是从哪里出土的？",
+   "expected_sources": [
+    "青铜-垂鼓腹凸弦纹矮锥足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-369",
+   "query": "丶鼎属于哪一类器物？",
+   "expected_sources": [
+    "青铜-丶鼎（主鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-370",
+   "query": "曾大師賓樂與鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-曾大師賓樂與鼎（曾太師賓樂與鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-371",
+   "query": "솭鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-솭鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-372",
+   "query": "伯氏鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-伯氏鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-373",
+   "query": "吳王孫無土鼎是何时何地出土的？",
+   "expected_sources": [
+    "青铜-吳王孫無土鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-374",
+   "query": "伯𾈑鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-伯𾈑鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-375",
+   "query": "光鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-光鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-376",
+   "query": "目云纹夔扁足鼎出土自哪个商墓？",
+   "expected_sources": [
+    "青铜-目云纹夔扁足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-377",
+   "query": "南明诰封圣旨中，贺自镜被晋赠为什么官职？",
+   "expected_sources": [
+    "河南博物院-南明诰封圣旨"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-378",
+   "query": "兒鼎甲的完整名称是什么？",
+   "expected_sources": [
+    "青铜-兒鼎甲"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-379",
+   "query": "戎乙鼎（乙戎鼎）是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-戎乙鼎（乙戎鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-380",
+   "query": "監鼎是什么年代的青铜器？",
+   "expected_sources": [
+    "青铜-監鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-381",
+   "query": "秦代垂鳞纹夔龙扁足鼎是哪一年出土的？",
+   "expected_sources": [
+    "青铜-垂鳞纹夔龙扁足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-382",
+   "query": "𫵒父乙鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-𫵒父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-383",
+   "query": "伯鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-伯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-384",
+   "query": "乳钉龙纹方鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-乳钉龙纹方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-385",
+   "query": "涡纹鸟纹越式鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-涡纹鸟纹越式鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-386",
+   "query": "唐镜在镜背纹饰的布局上出现了哪些新方式？",
+   "expected_sources": [
+    "河南博物院-抚琴引凤镜"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-387",
+   "query": "蟠虺纹球腹蹄足鼎是哪个朝代的器物？",
+   "expected_sources": [
+    "青铜-蟠虺纹球腹蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-388",
+   "query": "变形兽纹流鼎的出土地点是哪里？",
+   "expected_sources": [
+    "青铜-变形兽纹流鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-389",
+   "query": "凤鸟纹垂腹鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-凤鸟纹垂腹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-390",
+   "query": "蔡侯랯鼎（蔡侯申鼎）是在哪里出土的？",
+   "expected_sources": [
+    "青铜-蔡侯랯鼎（蔡侯申鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-391",
+   "query": "曾侯乙匜鼎是哪一年在哪个地方出土的？",
+   "expected_sources": [
+    "青铜-曾侯乙匜鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-392",
+   "query": "師同鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-師同鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-393",
+   "query": "史獸鼎属于什么类型的文物？",
+   "expected_sources": [
+    "青铜-史獸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-394",
+   "query": "变形火龙纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-变形火龙纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-395",
+   "query": "关于北宋《嘉祐石经周礼》残石，河南博物院《每周一品》栏目的电子邮箱是什么？",
+   "expected_sources": [
+    "河南博物院-北宋《嘉祐石经周礼》残石"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-396",
+   "query": "兽面纹鼎出土于哪个墓葬？",
+   "expected_sources": [
+    "青铜-兽面纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-397",
+   "query": "王子致鼎属于什么类型的文物？",
+   "expected_sources": [
+    "青铜-王子致鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-398",
+   "query": "戈己鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-戈己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-399",
+   "query": "子萬父癸鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-子萬父癸鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-400",
+   "query": "𿩮鼎属于什么器类？",
+   "expected_sources": [
+    "青铜-𿩮鼎（圍鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-401",
+   "query": "子衛鼎属于什么材质的器物？",
+   "expected_sources": [
+    "青铜-子衛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-402",
+   "query": "曾侯꺞鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-曾侯꺞鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-403",
+   "query": "釐鼎属于哪一类器物？",
+   "expected_sources": [
+    "青铜-釐鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-404",
+   "query": "王季鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-王季鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-405",
+   "query": "戍嗣子鼎现藏于哪个机构？",
+   "expected_sources": [
+    "青铜-戍嗣子鼎（原名戍듟鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-406",
+   "query": "商代涡纹中柱孟的纹饰和西晋时期的空柱盘相比有什么不同？",
+   "expected_sources": [
+    "河南博物院-商代涡纹中柱孟"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-407",
+   "query": "덖父丁鼎属于什么材质的文物？",
+   "expected_sources": [
+    "青铜-덖父丁鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-408",
+   "query": "天鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-天鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-409",
+   "query": "𫿌父癸鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-𫿌父癸鼎（商瞿鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-410",
+   "query": "샄單鼎的时代背景是什么？",
+   "expected_sources": [
+    "青铜-샄單鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-411",
+   "query": "《九方皋》的尺寸是多少？",
+   "expected_sources": [
+    "河南博物院-徐悲鸿《柳丝双喜图》轴"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-412",
+   "query": "二斗二益鼎是什么材质的？",
+   "expected_sources": [
+    "青铜-二斗二益鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-413",
+   "query": "素面弦纹蹄足鼎现藏于哪座博物馆？",
+   "expected_sources": [
+    "青铜-素面弦纹蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-414",
+   "query": "昶子白鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-昶子白鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-415",
+   "query": "션父己鼎是哪个朝代的？",
+   "expected_sources": [
+    "青铜-션父己鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-416",
+   "query": "素面收口锥足鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-素面收口锥足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-417",
+   "query": "错金云纹鼎是在哪里出土的？",
+   "expected_sources": [
+    "青铜-错金云纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-418",
+   "query": "亞b68鼎出土于什么地方？",
+   "expected_sources": [
+    "青铜-亞b68鼎（亞鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-419",
+   "query": "火纹鼎是哪个朝代的？",
+   "expected_sources": [
+    "青铜-火纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-420",
+   "query": "兽面纹束颈蹄足鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-兽面纹束颈蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-421",
+   "query": "夔龙涡纹垂腹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-夔龙涡纹垂腹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-422",
+   "query": "沈周《为碧天上人作山水图》画了些什么内容？",
+   "expected_sources": [
+    "河南博物院-沈周《涧水村居图》"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-423",
+   "query": "素面撇足越式鼎是哪个朝代的青铜器？",
+   "expected_sources": [
+    "青铜-素面撇足越式鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-424",
+   "query": "元代青花梅瓶的胎体有什么特点？",
+   "expected_sources": [
+    "元代-青花梅瓶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-425",
+   "query": "雷纹鼎现在由哪个机构收藏？",
+   "expected_sources": [
+    "青铜-雷纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-426",
+   "query": "冉鼎属于什么时期？",
+   "expected_sources": [
+    "青铜-冉鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-427",
+   "query": "析父乙鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-析父乙鼎（枚父乙鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-428",
+   "query": "素面凸弦纹蹄足鼎是什么时代的？",
+   "expected_sources": [
+    "青铜-素面凸弦纹蹄足鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-429",
+   "query": "中型空首布的铸行年代大约在什么时候？",
+   "expected_sources": [
+    "河南博物院-银空首布"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-430",
+   "query": "戈鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-戈鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-431",
+   "query": "弓父丁鼎还有哪些别的名称？",
+   "expected_sources": [
+    "青铜-弓父丁鼎（弓父丁方鼎，弓父丁鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-432",
+   "query": "亞貘鼎属于什么类别？",
+   "expected_sources": [
+    "青铜-亞獏鼎（亞貘鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-433",
+   "query": "山父戊鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-山父戊鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-434",
+   "query": "鄲孝子鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-鄲孝子鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-435",
+   "query": "師첫鼎的鼎名是什么？",
+   "expected_sources": [
+    "青铜-師첫鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-436",
+   "query": "百乳龙纹方鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-百乳龙纹方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-437",
+   "query": "應侯視工鼎的完整名称是什么？",
+   "expected_sources": [
+    "青铜-應侯視工鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-438",
+   "query": "甘鼎出土于山东省的哪个具体地点？",
+   "expected_sources": [
+    "青铜-甘鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-439",
+   "query": "小臣𠈆鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-小臣𠈆鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-440",
+   "query": "亞舟鼎现藏于美国哪个博物馆？",
+   "expected_sources": [
+    "青铜-亞舟鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-441",
+   "query": "兽面纹锥足鬲鼎出土于浙江湖州安吉县的哪个地方？",
+   "expected_sources": [
+    "青铜-兽面纹锥足鬲鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-442",
+   "query": "秦公鼎E出土于哪里？",
+   "expected_sources": [
+    "青铜-秦公鼎E"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-443",
+   "query": "셟鼎是什么材质的？",
+   "expected_sources": [
+    "青铜-셟鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-444",
+   "query": "信右佞宮鼎是什么材质的？",
+   "expected_sources": [
+    "青铜-信右佞宮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-445",
+   "query": "巍鼎是不是青铜器？",
+   "expected_sources": [
+    "青铜-巍鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-446",
+   "query": "疋冊父癸鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-疋冊父癸鼎（父癸匹冊鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-447",
+   "query": "元代青花凤首扁壶的胎色和胎质是怎样的？",
+   "expected_sources": [
+    "元代-青花凤首扁壶"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-448",
+   "query": "差王鼎是在哪一年出土的？",
+   "expected_sources": [
+    "青铜-差王鼎（□君鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-449",
+   "query": "宋公년鼎（宋公固鼎）现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-宋公년鼎（宋公固鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-450",
+   "query": "龙纹蝉纹鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-龙纹蝉纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-451",
+   "query": "걈鼎（原稱宿伯鼎）现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-걈鼎（原稱宿伯鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-452",
+   "query": "徐子鼎出土于哪一年？",
+   "expected_sources": [
+    "青铜-徐子鼎（子鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-453",
+   "query": "虢季鼎出土地点在哪里？",
+   "expected_sources": [
+    "青铜-虢季鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-454",
+   "query": "껖子曰鼎（養子曰鼎）的尺寸是多少？",
+   "expected_sources": [
+    "青铜-껖子曰鼎（養子曰鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-455",
+   "query": "羊父庚鼎是什么材质的？",
+   "expected_sources": [
+    "青铜-羊父庚鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-456",
+   "query": "솣鼎的时代是西周吗？",
+   "expected_sources": [
+    "青铜-솣鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-457",
+   "query": "鑄客鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-鑄客鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-458",
+   "query": "蟠螭纹圆捉手鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-蟠螭纹圆捉手鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-459",
+   "query": "作父乙鼎属于哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-作父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-460",
+   "query": "b69毌鼎（享毌鼎）现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-b69毌鼎（享毌鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-461",
+   "query": "季作寶彝鼎现藏于何处？",
+   "expected_sources": [
+    "青铜-季作寶彝鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-462",
+   "query": "陳生寉鼎是什么材质的器物？",
+   "expected_sources": [
+    "青铜-陳生寉鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-463",
+   "query": "撇足素面越式鼎出土于哪里？",
+   "expected_sources": [
+    "青铜-撇足素面越式鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-464",
+   "query": "쇒羊鼎属于什么材质？",
+   "expected_sources": [
+    "青铜-쇒羊鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-465",
+   "query": "君鼎乙的名称是怎么写的？",
+   "expected_sources": [
+    "青铜-君鼎乙"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-466",
+   "query": "平安君鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-平安君鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-467",
+   "query": "𣆪父癸方鼎的名称中包含了哪些字？",
+   "expected_sources": [
+    "青铜-𣆪父癸方鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-468",
+   "query": "几何纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-几何纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-469",
+   "query": "仲鼎是什么时期的？",
+   "expected_sources": [
+    "青铜-仲鼎（仲作旅鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-470",
+   "query": "南山四皓画像砖中的“南山四皓”是什么类型的题材？",
+   "expected_sources": [
+    "河南博物院-南山四皓画像砖"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-471",
+   "query": "重庆中国三峡博物馆藏中和琴的龙池和凤沼是什么形状？",
+   "expected_sources": [
+    "河南博物院-潞王琴"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-472",
+   "query": "𽆰辛鼎是哪个时代的青铜器？",
+   "expected_sources": [
+    "青铜-𽆰辛鼎（冉辛鼎、冉辛鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-473",
+   "query": "𣫭𣫭鼎（奚方鼎）属于什么朝代？",
+   "expected_sources": [
+    "青铜-񅜘񅋛鼎（奚方鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-474",
+   "query": "玉嵌宝石卧兔的尺寸是多少厘米？",
+   "expected_sources": [
+    "河南博物院-青玉兔形镇"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "henan",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-475",
+   "query": "舟鼎属于哪个历史时代的文物？",
+   "expected_sources": [
+    "青铜-舟鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-476",
+   "query": "矢襾父乙鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-矢襾父乙鼎（矢宁父乙鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-477",
+   "query": "兽面蝉纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-兽面蝉纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-478",
+   "query": "滕侯鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-滕侯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-479",
+   "query": "遣盄父鼎是哪个朝代的？",
+   "expected_sources": [
+    "青铜-遣盄父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-480",
+   "query": "王子𦔻鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-王子𦔻鼎（王子聽鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-481",
+   "query": "四叶目间涡纹鼎现在收藏在哪个机构？",
+   "expected_sources": [
+    "青铜-四叶目间涡纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-482",
+   "query": "仲𫣑父鼎（仲偁父鼎）的年代是？",
+   "expected_sources": [
+    "青铜-仲𫣑父鼎（仲偁父鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-483",
+   "query": "宣德釉里红杯采用什么绘法？",
+   "expected_sources": [
+    "宣德-釉里红杯"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "porcelain",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-484",
+   "query": "乳钉弦纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-乳钉弦纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-485",
+   "query": "窃曲纹环钮鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-窃曲纹环钮鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-486",
+   "query": "叔父鼎的出土时间和地点具体是什么？",
+   "expected_sources": [
+    "青铜-叔父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-487",
+   "query": "倝鼎的材质是什么？",
+   "expected_sources": [
+    "青铜-倝鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-488",
+   "query": "虢季子白鼎是哪个朝代的？",
+   "expected_sources": [
+    "青铜-虢季子白鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-489",
+   "query": "셕父辛鼎是哪个时代的？",
+   "expected_sources": [
+    "青铜-셕父辛鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-490",
+   "query": "垂鼓腹乳钉弦纹鼎现藏于哪个博物馆？",
+   "expected_sources": [
+    "青铜-垂鼓腹乳钉弦纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-491",
+   "query": "亞宣父乙鼎是青铜器吗？",
+   "expected_sources": [
+    "青铜-亞宣父乙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-492",
+   "query": "芮公鼎现在收藏在哪里？",
+   "expected_sources": [
+    "青铜-芮公鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-493",
+   "query": "亞엯鼎现藏于哪里？",
+   "expected_sources": [
+    "青铜-亞엯鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-494",
+   "query": "虢季氏子虎父鼎是什么时期的青铜器？",
+   "expected_sources": [
+    "青铜-虢季氏子虎父鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-495",
+   "query": "弔鼎还有个别称叫什么？",
+   "expected_sources": [
+    "青铜-弔鼎（弔作旅鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-496",
+   "query": "羊箙鼎现在收藏在哪个博物馆？",
+   "expected_sources": [
+    "青铜-羊箙鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-497",
+   "query": "鄬子뙽鼎（薳子昃鼎）是哪一年出土的？",
+   "expected_sources": [
+    "青铜-鄬子뙽鼎（薳子昃鼎）"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-498",
+   "query": "窃曲龙纹鼎的尺寸是多少？",
+   "expected_sources": [
+    "青铜-窃曲龙纹鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  },
+  {
+   "id": "auto-499",
+   "query": "者샄鼎属于什么类型的器物？",
+   "expected_sources": [
+    "青铜-者샄鼎"
+   ],
+   "expected_paths": [
+    "question"
+   ],
+   "kind": "bronze",
+   "note": "扩展集·Q-to-Q 自动生成"
+  }
+ ]
+}

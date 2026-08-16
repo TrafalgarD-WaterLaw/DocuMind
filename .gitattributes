@@ -1,0 +1,13 @@
+# 跨平台换行符归一化:仓库内统一 LF,checkout 按平台自适应
+* text=auto eol=lf
+
+# 二进制文件不参与换行转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.pth binary
+*.db binary
+*.xlsx binary

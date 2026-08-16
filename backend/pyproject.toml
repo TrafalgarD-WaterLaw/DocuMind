@@ -1,0 +1,66 @@
+[project]
+name = "smart-artifact-explorer-backend"
+version = "0.1.0"
+description = "智慧文物探索后端服务"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.6.0",
+    "python-multipart>=0.0.18",
+    "openai>=1.58.0",
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-text-splitters>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "neo4j>=5.27.0",
+    "torch==2.13.0+cu126",
+    "torchvision==0.28.0+cu126",
+    "pillow>=11.0.0",
+    "pandas>=2.2.0",
+    "modelscope>=1.20.0",
+    "pypdf>=5.1.0",
+    "rank-bm25>=0.2.0",
+    "docling>=2.114.0",
+    "sentence-transformers>=5.6.0",
+    "chromadb>=1.5.9",
+    "jieba>=0.42.1",
+    "neomodel>=6.2.0",
+    "tenacity>=9.1.4",
+]
+
+# dev 依赖用 PEP 735 dependency-groups（uv 默认包含）——
+# 之前用 [project.optional-dependencies].dev 不被 uv sync/run 安装，
+# uv sync 把不属 lock 的 pytest 当孤儿清理，导致 `uv run pytest`
+# 回退 PATH 里的全局 pytest、import 不到项目依赖
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.28.0",
+    "ruff>=0.8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+# ── torch cu126 来源（PyPI 只有 CPU 版，GPU 版须从 pytorch 官方 index 取）──
+# 不加此配置，uv run 每次 sync 会把 torch 退回 PyPI 的 +cpu 版
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+torchvision = { index = "pytorch-cu126" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
