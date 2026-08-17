@@ -10,6 +10,8 @@ export interface ChatMessage {
   id: string
   role: 'user' | 'assistant'
   content: string
+  /** 用户上传的图片（dataURL，vision 多模态问答时携带） */
+  image?: string
   reasoning?: string
   /** 证据来源引用（sources 流事件收集） */
   sources?: SourceItem[]

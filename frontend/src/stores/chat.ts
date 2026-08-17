@@ -13,6 +13,16 @@ import {
 import { streamChat, streamResearch } from '@/api/chat'
 import { streamVision } from '@/api/vision'
 
+/** 图片文件 → dataURL（消息持久化后重载仍可显示，blob URL 会失效） */
+function fileToDataURL(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(reader.result as string)
+    reader.onerror = () => reject(reader.error)
+    reader.readAsDataURL(file)
+  })
+}
+
 export interface Session {
   id: string
   title: string
@@ -212,6 +222,8 @@ export const useChatStore = defineStore('chat', () => {
 
     const userMessage: ChatMessage = {
       id: nanoid(), role: 'user', content: query.trim(), timestamp: Date.now(),
+      // 图片转 dataURL 存入消息——会话持久化后重载仍可显示
+      image: imageFile ? await fileToDataURL(imageFile) : undefined,
     }
     session.messages.push(userMessage)
 

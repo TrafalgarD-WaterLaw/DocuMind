@@ -80,6 +80,9 @@
         </span>
       </div>
 
+      <!-- 用户上传的图片（vision 问答） -->
+      <img v-if="message.image" :src="message.image" alt="上传图片" class="user-image" />
+
       <!-- Message content -->
       <div class="message-content">
         <div v-if="message.isStreaming && !message.content" class="streaming-indicator">
@@ -288,6 +291,16 @@ const tokenText = computed(() => {
   line-height: 1.8;
   word-wrap: break-word;
   font-size: 14px;
+}
+
+/* 用户上传图片（vision 问答） */
+.user-image {
+  max-width: 240px;
+  max-height: 180px;
+  border-radius: 8px;
+  border: 1px solid rgba(var(--color-gold-rgb), 0.4);
+  margin: 10px 16px 0;
+  display: block;
 }
 
 .message-text {
