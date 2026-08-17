@@ -87,6 +87,11 @@ def build_docs(data: dict) -> list[dict]:
         ]
         if title_idxs:
             groups = []
+            # 标题前的简介/背景并入"简介"块——原实现直接丢弃,导致
+            # "商代/玉器/尺寸/出土地"等基本信息不进库,检索答不出时期
+            prelude = " ".join(sections[: title_idxs[0]]).strip()
+            if prelude:
+                groups.append(("简介", prelude))
             for idx, t in enumerate(title_idxs):
                 end = title_idxs[idx + 1] if idx + 1 < len(title_idxs) else len(sections)
                 groups.append((sections[t], " ".join(sections[t + 1 : end])))
