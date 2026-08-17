@@ -199,57 +199,70 @@ class DeepResearchService:
         self, tasks: list[AgentTask],
         expert_results: dict[str, str], expert_sources: list[dict],
     ) -> AsyncGenerator[StreamEvent, None]:
-        """依次执行各专家（running → done/failed 带耗时）——第 3 步
+        """并行执行各专家（总耗时 ≈ 最慢专家,而非串行累加）——第 3 步
 
         结果写入入参容器（generator 无法 return——side-channel 模式）；
         sources 去重后统一全局编号（证据锚定）。
         """
-        seen_sources: set[tuple] = set()  # 去重指纹集合（O(n)，替代每轮重建集合）
+        # 先发全部 running 事件（前端流水线三专家同时点亮）
         for task in tasks:
-            expert = self._get_expert(task.agent)
-            if expert is None:
+            if self._get_expert(task.agent) is None:
                 yield self._expert_event(
                     task.agent, "failed", f"专家 {task.agent} 不可用",
                 )
                 await asyncio.sleep(0)
                 continue
-
-            t0 = time.time()
             yield self._expert_event(
                 task.agent, "running", f"{task.agent} 正在分析...",
             )
             await asyncio.sleep(0)
 
+        async def _run_one(task: AgentTask) -> tuple[str, str, float, str | None]:
+            expert = self._get_expert(task.agent)
+            t0 = time.time()
             try:
                 result = await expert.execute(task.query, task.context)
-                # reasoning 事件：专家研究摘要（前端"推理过程"展示）
-                if result and result.strip():
-                    yield StreamEvent(
-                        type=StreamEventType.REASONING,
-                        data=f"【{_ROLE_TITLES.get(task.agent, task.agent)}】"
-                             f"{result.strip()[:200]}…",
-                        timestamp=time.time(),
-                    )
-                    await asyncio.sleep(0)
-                expert_results[task.agent] = result
-                # 证据锚定：收集专家检索来源（去重后统一全局编号 1..N）
-                for src in getattr(expert, "last_sources", []):
-                    key = (src.get("source"), src.get("content"))
-                    if key not in seen_sources:
-                        seen_sources.add(key)
-                        expert_sources.append(src)
-
-                yield self._expert_event(
-                    task.agent, "done", f"{task.agent} 分析完成",
-                    detail={"result_length": len(result)},
-                    duration=round(time.time() - t0, 1),
-                )
+                return task.agent, result, t0, None
             except Exception as e:
                 logger.exception(f"专家 {task.agent} 执行失败")
+                return task.agent, "", t0, str(e)
+
+        # asyncio.gather 并行执行——三专家同时跑,总耗时 = 最慢专家
+        results = await asyncio.gather(
+            *(_run_one(t) for t in tasks if self._get_expert(t.agent) is not None)
+        )
+        seen_sources: set[tuple] = set()  # 去重指纹集合（O(n)，替代每轮重建集合）
+        for agent, result, t0, err in results:
+            if err:
                 yield self._expert_event(
-                    task.agent, "failed", f"{task.agent} 分析失败: {str(e)}",
+                    agent, "failed", f"{agent} 分析失败: {err}",
                     duration=round(time.time() - t0, 1),
                 )
+                await asyncio.sleep(0)
+                continue
+            expert_results[agent] = result
+            # reasoning 事件：专家研究摘要（前端"推理过程"展示）
+            if result and result.strip():
+                yield StreamEvent(
+                    type=StreamEventType.REASONING,
+                    data=f"【{_ROLE_TITLES.get(agent, agent)}】"
+                         f"{result.strip()[:200]}…",
+                    timestamp=time.time(),
+                )
+                await asyncio.sleep(0)
+            # 证据锚定：收集专家检索来源（去重后统一全局编号 1..N）
+            expert = self._get_expert(agent)
+            for src in getattr(expert, "last_sources", []):
+                key = (src.get("source"), src.get("content"))
+                if key not in seen_sources:
+                    seen_sources.add(key)
+                    expert_sources.append(src)
+
+            yield self._expert_event(
+                agent, "done", f"{agent} 分析完成",
+                detail={"result_length": len(result)},
+                duration=round(time.time() - t0, 1),
+            )
             await asyncio.sleep(0)
 
     async def _synthesize_report(
@@ -332,7 +345,9 @@ class DeepResearchService:
                 "sections": [
                     {
                         "title": _ROLE_TITLES.get(role, role),
-                        "content": (result or "")[:150],
+                        # 完整专家分析（不再截断——计划折叠默认收起,
+                        # 展开可读每个 agent 的完整回复）
+                        "content": result or "",
                     }
                     for role, result in expert_results.items()
                 ],

@@ -128,7 +128,17 @@ function applyStreamEvent(event: StreamEvent, msg: ChatMessage, st: StreamState)
         reason: data.reason ? String(data.reason) : undefined,
       }
       if (!msg.pipeline) msg.pipeline = []
-      msg.pipeline.push(stage)
+      // expert 事件按 agent 去重——running → done 更新同一条而非追加
+      // （后端对同一专家发两次事件:正在分析 / 完成;追加会产生重复行）
+      if (stage.stage === 'expert' && stage.agent) {
+        const idx = msg.pipeline.findIndex(
+          p => p.stage === 'expert' && p.agent === stage.agent,
+        )
+        if (idx >= 0) msg.pipeline.splice(idx, 1, stage)
+        else msg.pipeline.push(stage)
+      } else {
+        msg.pipeline.push(stage)
+      }
       break
     }
     case StreamEventType.TRACE: {
