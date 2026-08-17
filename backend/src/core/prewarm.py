@@ -34,16 +34,14 @@ def prewarm() -> None:
         except Exception as e:
             logger.warning(f"VectorStore init failed (non-fatal): {e}")
 
-        # BM25 先于重模型预热——首问若撞上 BM25 懒构建会阻塞 1 分钟
+        # 检索器整体预热——触发 HybridRetriever 创建（内部同步构建 BM25
+        # 5786 docs ≈ 1 分钟 + questions 索引加载）。预热线程内完成,
+        # 请求线程直接拿容器缓存的实例,不再重复构建阻塞事件循环。
         try:
-            from retrieval.bm25 import BM25Index
-
-            # 直接 build（dirty=False 时 rebuild_if_dirty 是空操作,
-            # jieba 分词字典从未预热;build 触发全量分词加载）
-            BM25Index().build(container.vector.get_all_documents())
-            logger.info("BM25Index: ready")
+            _ = container.retriever
+            logger.info("HybridRetriever: ready（BM25/questions 就绪）")
         except Exception as e:
-            logger.warning(f"BM25 预热失败（首次请求将重建）: {e}")
+            logger.warning(f"检索器预热失败（首次请求将重建）: {e}")
 
         # 懒加载重模型（bge embed / bge-reranker / CLIP）
         try:
