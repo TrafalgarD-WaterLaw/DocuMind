@@ -49,3 +49,7 @@ docs/resume.md
 # ── 本机遗留(过时内容,不入库)──
 /.env.example
 /启动命令.txt
+
+# ── 不公开(本机保留,不入库)──
+/CLAUDE.md
+/docs/
