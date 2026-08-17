@@ -3,6 +3,7 @@
 
 Build (Artifact)-[EXCAVATED_AT]->(Site) and (Artifact)-[BELONGS_TO]->(Era) graph.
 """
+import os
 import sys
 from pathlib import Path
 
@@ -12,8 +13,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from core.di import container  # noqa: E402
 
-# ── 数据路径 ──
-BRONZE_DIR = Path(r"E:/桌面/软创赛/datasets/青铜器/complete_DATASET")
+# ── 数据路径（环境变量 BRONZE_DATASET_DIR 覆盖，公开仓库不含本机路径）──
+BRONZE_DIR = Path(os.environ.get("BRONZE_DATASET_DIR", "datasets/bronze"))
 COL_NAMES = ["序号", "图片编号", "器物名称", "时期", "尺寸", "类别", "出土地", "出土时间"]
 
 

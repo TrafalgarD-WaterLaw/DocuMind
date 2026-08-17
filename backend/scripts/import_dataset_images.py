@@ -16,6 +16,7 @@
 """
 import argparse
 import json
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -27,14 +28,12 @@ DATA_DIR = Path(__file__).parent.parent / "src" / "data"
 IMAGES_ROOT = DATA_DIR / "images"
 INDEX_OUT = DATA_DIR / "image_index.json"
 
-PORCELAIN_BASE = Path(r"E:/桌面/软创赛/datasets/瓷器/YMbwp-Dataset")
-BRONZE_BASE = Path(r"E:/桌面/软创赛/datasets/青铜器/complete_DATASET/ori_png")
+# 数据源目录——环境变量 PORCELAIN/BRONZE_DATASET_DIR 覆盖（公开仓库不含本机路径）
+PORCELAIN_BASE = Path(os.environ.get("PORCELAIN_DATASET_DIR", "datasets/porcelain"))
+BRONZE_ROOT = Path(os.environ.get("BRONZE_DATASET_DIR", "datasets/bronze"))
+BRONZE_BASE = BRONZE_ROOT / "ori_png"
 # oripng 图片覆盖三份 Excel（train/val/test），合并编号→器名映射
-BRONZE_EXCELS = [
-    Path(r"E:/桌面/软创赛/datasets/青铜器/complete_DATASET/train.xlsx"),
-    Path(r"E:/桌面/软创赛/datasets/青铜器/complete_DATASET/val.xlsx"),
-    Path(r"E:/桌面/软创赛/datasets/青铜器/complete_DATASET/test.xlsx"),
-]
+BRONZE_EXCELS = [BRONZE_ROOT / f"{s}.xlsx" for s in ("train", "val", "test")]
 HENAN_MANIFEST = DATA_DIR / "henan_images.json"
 
 

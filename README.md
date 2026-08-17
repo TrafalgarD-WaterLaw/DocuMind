@@ -61,8 +61,9 @@ pnpm dev
 
 运行数据(chroma 向量库 / 数据集图片 / 上传文档 / 爬取文本 / 轨迹日志)均**不入库**,克隆后需自行重建:
 
-- 爬取与入库脚本在 `backend/scripts/`(历史脚本,标 deprecated 仍可用);统一入口 `python -m ingestion --source X`
-- 数据集图片(bronze / henan / porcelain 三个子目录)来自公开文物图片数据集,需自行获取放入 `backend/src/data/images/`
+- **静态数据入库脚本**在 `backend/scripts/`,按依赖顺序:爬取(`crawl_henan_*.py`)→ 图片落盘与映射表(`import_dataset_images.py`)→ 文本/图片块入 Chroma(`import_*_chroma.py`、`import_henan_image_chunks.py`)→ CLIP 图片索引(`import_clip_images.py`)→ 问题索引(`generate_questions.py`)→ 图谱(`import_*_neo4j.py`)
+- **数据集目录经环境变量配置**(`BRONZE_DATASET_DIR` / `PORCELAIN_DATASET_DIR`,默认 `datasets/bronze`、`datasets/porcelain`)——公开仓库不含本机路径
+- 上传 PDF 走统一管道 `python -m ingestion --source X`(含问题生成)
 - Neo4j 图谱由 `import_*_neo4j.py` 系列脚本构建
 
 ## 📁 项目结构

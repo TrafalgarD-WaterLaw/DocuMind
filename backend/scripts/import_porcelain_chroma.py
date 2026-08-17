@@ -4,6 +4,7 @@
 Splits each artifact's full appraisal text into sections by topic
 (circle foot, body, glaze, decoration, mark, etc.) for granular retrieval.
 """
+import os
 import re
 import sys
 from pathlib import Path
@@ -14,7 +15,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from core.di import container  # noqa: E402
 
-EXCEL_PATH = Path(r"E:/桌面/软创赛/datasets/瓷器/瓷器.xlsx")
+# 数据源目录——环境变量 PORCELAIN_DATASET_DIR 覆盖（公开仓库不含本机路径）
+EXCEL_PATH = Path(os.environ.get("PORCELAIN_DATASET_DIR", "datasets/porcelain")) / "瓷器.xlsx"
 COL_NAMES = ["kiln_name", "kiln_intro", "source_url", "artifact_name", "artifact_intro", "source_url2"]
 
 

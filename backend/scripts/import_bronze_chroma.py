@@ -12,6 +12,7 @@ Idempotent: deletes previous bronze chunks (source prefix "青铜-") then
 re-imports. Deduplicates by artifact name to stay aligned with the 2248
 unique Artifact nodes in Neo4j.
 """
+import os
 import sys
 from pathlib import Path
 
@@ -21,7 +22,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from core.di import container  # noqa: E402
 
-DATASET_DIR = Path(r"E:/桌面/软创赛/datasets/青铜器/complete_DATASET")
+# 数据源目录——环境变量 BRONZE_DATASET_DIR 覆盖（公开仓库不含本机路径）
+DATASET_DIR = Path(os.environ.get("BRONZE_DATASET_DIR", "datasets/bronze"))
 ERA_MAP = {
     1: "商代", 2: "西周", 3: "春秋", 4: "战国",
     5: "秦代", 6: "汉代", 7: "魏晋", 8: "南北朝",

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Import porcelain kilns and artifacts into Neo4j.
 
-Reads the porcelain dataset (E:/桌面/软创赛/datasets/瓷器/瓷器.xlsx), creates:
+Reads the porcelain dataset (path from PORCELAIN_DATASET_DIR env, default datasets/porcelain/瓷器.xlsx), creates:
   - Kiln nodes (4: 洪武/宣德/永乐/元代) with kiln intro
   - Artifact nodes named "{kiln}-{artifact}" (matches Chroma source format,
     avoids name collisions across kilns) with kind=porcelain
@@ -9,6 +9,7 @@ Reads the porcelain dataset (E:/桌面/软创赛/datasets/瓷器/瓷器.xlsx), c
 
 Idempotent: MERGE by name, safe to re-run.
 """
+import os
 import sys
 from pathlib import Path
 
@@ -18,7 +19,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from core.di import container  # noqa: E402
 
-EXCEL_PATH = Path(r"E:/桌面/软创赛/datasets/瓷器/瓷器.xlsx")
+# 数据源目录——环境变量 PORCELAIN_DATASET_DIR 覆盖（公开仓库不含本机路径）
+EXCEL_PATH = Path(os.environ.get("PORCELAIN_DATASET_DIR", "datasets/porcelain")) / "瓷器.xlsx"
 COL_NAMES = ["kiln_name", "kiln_intro", "source_url", "artifact_name", "artifact_intro", "source_url2"]
 
 
