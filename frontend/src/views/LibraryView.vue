@@ -39,22 +39,6 @@
         @change="onRetryFile"
       />
 
-      <!-- 分段策略（高级选项） -->
-      <div class="chunk-options">
-        <el-collapse>
-          <el-collapse-item title="分段策略（高级）">
-            <div class="chunk-op-row">
-              <span>分段大小</span>
-              <el-slider v-model="chunkSize" :min="200" :max="1000" :step="100" show-input />
-            </div>
-            <div class="chunk-op-row">
-              <span>分段重叠</span>
-              <el-slider v-model="chunkOverlap" :min="0" :max="200" :step="10" show-input />
-            </div>
-          </el-collapse-item>
-        </el-collapse>
-      </div>
-
       <!-- 任务队列：每文件一卡，实时状态 -->
       <div v-if="queue.length" class="task-queue">
         <div v-for="t in queue" :key="t.task_id" class="task-card" :class="'task-' + t.status">
@@ -124,9 +108,6 @@ const queue = ref<UploadTask[]>([])
 const documents = ref<DocInfo[]>([])
 const deleting = ref('')
 const statsText = ref('')
-const chunkSize = ref(500)
-const chunkOverlap = ref(50)
-
 const TASK_POLL_MS = 2000  // 任务队列轮询间隔
 const ACTIVE_STATUSES = new Set(['queued', 'parsing', 'chunking', 'indexing', 'questions'])
 const hasActive = computed(() => queue.value.some(t => ACTIVE_STATUSES.has(t.status)))
@@ -232,11 +213,7 @@ async function handleFilesChange(file: any) {
   }
 
   try {
-    const res = await uploadDocument(raw, {
-      replace,
-      chunkSize: chunkSize.value,
-      overlap: chunkOverlap.value,
-    })
+    const res = await uploadDocument(raw, { replace })
     // 立即入队显示状态卡
     queue.value.unshift({
       task_id: res.task_id, file_name: res.file_name, source: '',

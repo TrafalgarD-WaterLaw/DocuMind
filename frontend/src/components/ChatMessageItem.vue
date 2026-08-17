@@ -16,30 +16,6 @@
     </div>
 
     <div class="message-body">
-      <!-- 检索诊断（trace 事件） -->
-      <el-collapse v-if="message.trace" class="trace-collapse">
-        <el-collapse-item>
-          <template #title>
-            <span class="steps-title">🔬 本轮检索诊断</span>
-          </template>
-          <div class="trace-body">
-            <div v-for="(p, name) in message.trace.paths" :key="name" class="trace-row">
-              <span class="trace-name">{{ PATH_LABELS[name] || name }}</span>
-              <div class="trace-bar">
-                <div class="trace-fill" :style="{ width: barWidth(name) }" />
-              </div>
-              <span class="trace-nums">{{ p.hits }} 条 · {{ p.took_ms }}ms</span>
-            </div>
-            <div class="trace-meta">
-              <span>改写：{{ message.trace.rewritten_query || '无' }}</span>
-              <span>CRAG：{{ message.trace.crag_triggered ? '触发' : '未触发' }}</span>
-              <span>Token：{{ tokenText }}</span>
-              <span>总耗时：{{ message.trace.total_ms }}ms</span>
-            </div>
-          </div>
-        </el-collapse-item>
-      </el-collapse>
-
       <!-- 研究计划（markdown_dict 事件——深度模式专家分工；F3: MindMapCard
            删除后补渲染，此前数据被收集持久化但永远不展示） -->
       <el-collapse v-if="message.markdownDict" class="plan-collapse">
@@ -114,7 +90,6 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { PATH_LABELS } from '@/utils/labels'
 import { imageAbsUrl } from '@/utils/images'
 import { useChatStore } from '@/stores/chat'
 import type { ChatMessage } from '@/types/domain'
@@ -193,22 +168,6 @@ function onCiteHover(e: MouseEvent) {
 function onCiteHoverEnd(e: MouseEvent) {
   if ((e.target as HTMLElement).closest('.cite')) citeHover.value = null
 }
-
-const maxHits = computed(() =>
-  Math.max(1, ...Object.values(props.message.trace?.paths || {}).map(p => p.hits)),
-)
-
-function barWidth(name: string): string {
-  const p = props.message.trace?.paths[name]
-  if (!p) return '0%'
-  return `${Math.max(4, (p.hits / maxHits.value) * 100)}%`
-}
-
-const tokenText = computed(() => {
-  const u = props.message.trace?.llm_usage
-  if (!u) return '—'
-  return `${u.prompt_tokens ?? '?'} / ${u.completion_tokens ?? '?'}`
-})
 
 </script>
 
@@ -474,33 +433,4 @@ const tokenText = computed(() => {
 .plan-content { font-size: 12px; color: #6b5a3f; white-space: pre-wrap; }
 .plan-related { border-top: 1px dashed rgba(var(--color-gold-rgb), 0.3); padding-top: 6px; }
 .plan-related-q { font-size: 12px; color: #8a7a5f; padding: 2px 0; }
-
-.trace-collapse { margin-bottom: 8px; }
-
-.trace-body { padding: 4px 2px; }
-
-.trace-row {
-  display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px;
-}
-
-.trace-name { width: 56px; color: var(--color-primary); font-weight: 600; flex-shrink: 0; }
-
-.trace-bar {
-  flex: 1; height: 8px; background: rgba(var(--color-gold-rgb), 0.15);
-  border-radius: 4px; overflow: hidden;
-}
-
-.trace-fill {
-  height: 100%; border-radius: 4px;
-  background: linear-gradient(90deg, var(--color-gold), var(--color-accent));
-  transition: width 0.3s;
-}
-
-.trace-nums { width: 90px; text-align: right; color: #999; flex-shrink: 0; }
-
-.trace-meta {
-  display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px;
-  padding-top: 6px; border-top: 1px dashed rgba(var(--color-gold-rgb), 0.4);
-  font-size: 11px; color: var(--color-ink-muted);
-}
 </style>
