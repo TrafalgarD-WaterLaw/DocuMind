@@ -54,6 +54,9 @@ def prewarm() -> None:
         except Exception as e:
             logger.warning(f"模型预热失败（首次请求将重新加载）: {e}")
 
+        # 全部就绪标志——看到此行即可开始提问（单项失败已降级,不影响其余）
+        logger.info("════ 全部加载完成，可以开始提问 ════")
+
     global _prewarm_thread
     _prewarm_thread = threading.Thread(
         target=_warm, daemon=True, name="model-prewarm"
