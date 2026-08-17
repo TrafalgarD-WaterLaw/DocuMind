@@ -56,27 +56,6 @@
       </div>
     </section>
 
-    <!-- ── 入库工作流 ── -->
-    <section class="workflow">
-      <div class="workflow-step">
-        <div class="step-index">壹</div>
-        <h4>文档入库</h4>
-        <p>上传 PDF 古籍、图录，Docling 解析版面、表格、公式</p>
-      </div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step">
-        <div class="step-index">贰</div>
-        <h4>建库索引</h4>
-        <p>分块入库 Chroma，LLM 生成假设问题，构建混合索引</p>
-      </div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step">
-        <div class="step-index">叁</div>
-        <h4>智能问答</h4>
-        <p>多路召回 + RRF 融合 + 多智能体协作，证据可溯源</p>
-      </div>
-    </section>
-
     <!-- 底部装饰 -->
     <div class="home-footer-ornament">
       <div class="ornament-line"></div>
@@ -344,55 +323,6 @@ onBeforeUnmount(() => {
   }
 }
 
-/* ── 入库工作流 ── */
-.workflow {
-  display: flex;
-  align-items: stretch;
-  gap: 8px;
-  width: 100%;
-  max-width: 860px;
-  margin-bottom: 40px;
-
-  .workflow-step {
-    flex: 1;
-    text-align: center;
-    padding: 18px 14px;
-    border: 1px dashed rgba(var(--color-gold-rgb), 0.5);
-    border-radius: 8px;
-    background: rgba(253, 250, 243, 0.6);
-  }
-
-  .step-index {
-    font-family: 'STSong', 'SimSun', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--color-gold);
-    margin-bottom: 6px;
-  }
-
-  h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 6px;
-    letter-spacing: 2px;
-  }
-
-  p {
-    font-size: 11.5px;
-    color: var(--color-ink);
-    opacity: 0.6;
-    line-height: 1.6;
-  }
-
-  .workflow-arrow {
-    align-self: center;
-    color: var(--color-gold);
-    font-size: 18px;
-    padding: 0 2px;
-  }
-}
-
 /* ── Footer ornament ── */
 .home-footer-ornament {
   display: flex;
@@ -429,14 +359,6 @@ onBeforeUnmount(() => {
 @media (max-width: 1024px) {
   .feature-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .workflow {
-    flex-direction: column;
-
-    .workflow-arrow {
-      transform: rotate(90deg);
-    }
   }
 }
 
