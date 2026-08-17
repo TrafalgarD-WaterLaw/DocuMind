@@ -40,14 +40,17 @@ class ResearchOrchestrator:
         trace,
         t_start: float,
         clip_by_source: dict[str, list[str]] | None = None,
+        vision_hint: str = "",
     ):
         """多模态问答编排——vision 的查询准备由调用方构造（识别名+问题），
         统一回答编排委托 QuickAnswerService._answer_flow（与文本问答共用）。
 
         vision 与 chat/research 统一经 orchestrator 单例编排。
+        vision_hint: 识别结果强约束——LLM 知道用户照片已识别为哪件文物,
+        只围绕它回答（不注入时会把证据里多件文物逐一列举）。
         """
         async for ev in self._quick._answer_flow(
-            query, history, prep, trace, t_start, clip_by_source,
+            query, history, prep, trace, t_start, clip_by_source, vision_hint,
         ):
             yield ev
 

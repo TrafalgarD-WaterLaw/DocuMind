@@ -138,10 +138,17 @@ async def _generate_vision(
 
     # 4. 统一编排（与文本问答共用——检索/CRAG/拒答/净化/生成/诊断/兜底）
     # 走 orchestrator 单例的 vision_answer 门面（与 chat/research 同模式）
+    # 识别名强约束注入 prompt——LLM 只围绕识别结果作答,不列举其他文物
+    vision_hint = (
+        f"用户上传的照片已识别为「{result}」（置信度 {confidence:.2f}）。"
+        "请**只围绕这一件文物**作答,回答它是什么、什么时期、材质、尺寸、"
+        "出土信息等;不要列举或比较知识库中的其他文物。"
+        if result else ""
+    )
     trace = RetrievalTrace(trace_id=new_trace_id(), query=query)
     t_start = time.time()
     async for ev in container.orchestrator.vision_answer(
-        query, None, prep, trace, t_start, clip_by_source,
+        query, None, prep, trace, t_start, clip_by_source, vision_hint,
     ):
         yield ev.to_ndjson()
 

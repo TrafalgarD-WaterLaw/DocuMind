@@ -317,6 +317,7 @@ class QuickAnswerService:
         t_start: float,
         clip_by_source: dict[str, list[str]] | None = None,
         label: str = "",
+        vision_hint: str = "",
     ) -> AsyncGenerator[StreamEvent, None]:
         """证据组装 + 流式生成 + 检索诊断（quick / 分解共用尾部）
 
@@ -357,6 +358,7 @@ class QuickAnswerService:
                 "agent_quick",
                 doc_context=doc_context or "（未检索到相关知识）",
                 query=await self._build_memory_context(query, history),
+                vision_hint=vision_hint,
             ),
         )
         # → 前端流水线显示: "生成中"
@@ -531,6 +533,7 @@ class QuickAnswerService:
         self, query: str, history: list[dict] | None,
         prep: QueryPlan, trace: RetrievalTrace, t_start: float,
         clip_by_source: dict[str, list[str]] | None = None,
+        vision_hint: str = "",
     ) -> AsyncGenerator[StreamEvent, None]:
         """统一回答编排:查询准备事件 → 检索 → CRAG → 拒答 → 净化 → 生成
 
@@ -599,6 +602,7 @@ class QuickAnswerService:
         # 净化 / 证据链 / 生成 / 诊断 统一收口
         async for ev in self._generate_answer(
             query, history, merged, trace, t_start, clip_by_source,
+            vision_hint=vision_hint,
         ):
             yield ev
 

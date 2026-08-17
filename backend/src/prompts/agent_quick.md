@@ -10,4 +10,5 @@
 参考知识库（编号即为引用来源）:
 {doc_context}
 
+{vision_hint}
 当前问题：{query}
