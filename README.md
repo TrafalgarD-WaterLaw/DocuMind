@@ -59,7 +59,7 @@ pnpm dev
 
 ## 📦 数据说明
 
-运行数据(chroma 向量库 / 数据集图片 / 上传文档 / 轨迹日志)**不入库**,仓库仅分发小 JSON 数据(河南博物院爬取文本 283 条、图注级图片清单、图片映射表)。重建方式:
+运行数据(chroma 向量库 / 数据集图片 / 上传文档 / 爬取文本 / 轨迹日志)均**不入库**,克隆后需自行重建:
 
 - 爬取与入库脚本在 `backend/scripts/`(历史脚本,标 deprecated 仍可用);统一入口 `python -m ingestion --source X`
 - 数据集图片(bronze / henan / porcelain 三个子目录)来自公开文物图片数据集,需自行获取放入 `backend/src/data/images/`
