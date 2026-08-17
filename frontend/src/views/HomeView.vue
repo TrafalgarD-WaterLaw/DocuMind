@@ -60,7 +60,7 @@
     <section class="workflow">
       <div class="workflow-step">
         <div class="step-index">壹</div>
-        <h4>庋藏文档</h4>
+        <h4>文档入库</h4>
         <p>上传 PDF 古籍、图录，Docling 解析版面、表格、公式</p>
       </div>
       <div class="workflow-arrow">→</div>
