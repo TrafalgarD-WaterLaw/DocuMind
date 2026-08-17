@@ -18,7 +18,7 @@
     <div class="message-body">
       <!-- 研究计划（markdown_dict 事件——深度模式专家分工；F3: MindMapCard
            删除后补渲染，此前数据被收集持久化但永远不展示） -->
-      <el-collapse v-if="message.markdownDict" class="plan-collapse">
+      <el-collapse v-if="message.markdownDict" v-model="planOpen" class="plan-collapse">
         <el-collapse-item>
           <template #title>
             <span class="steps-title">
@@ -125,6 +125,9 @@ const props = defineProps<{
 }>()
 
 const chatStore = useChatStore()
+
+// 研究计划折叠默认收起——回答直接展示综合报告(markdown 渲染),专家原文按需展开
+const planOpen = ref<string[]>([])
 
 // ── 引用联动：点击 [N] 聚焦证据面板 ──
 

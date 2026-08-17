@@ -62,8 +62,9 @@ class Synthesizer:
         )
         # 偶发空响应/异常统一 llm_call_with_retry 兜底（异常/空响应抖动退避；
         # 4xx 立即上抛）。失败返回空串——深度研究降级为仅专家分析输出。
+        # max_tokens=8192——默认 4096 会截断长报告（实测在"思维导图"处断掉）
         try:
-            return await llm_call_with_retry(messages, self.llm)
+            return await llm_call_with_retry(messages, self.llm, max_tokens=8192)
         except Exception as e:
             logger.warning(f"Synthesizer LLM 调用失败，返回空: {e}")
             return ""
