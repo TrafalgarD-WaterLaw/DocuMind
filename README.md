@@ -17,7 +17,7 @@
 - [系统架构](#系统架构)
 - [项目结构](#项目结构)
 - [快速开始](#快速开始)
-- [数据重建](#数据重建配置)
+- [数据集](#数据集)
 - [技术栈](#技术栈)
 - [未来规划](#未来规划)
 - [免责声明与许可](#免责声明与许可)
@@ -156,37 +156,7 @@ pnpm dev
 | 瓷器数据集(公开) | 图录 Excel(窑口 / 器物 / 鉴赏)+ 图片 | 70 个分类目录 |
 | 用户上传 PDF | 运行时数据(异步解析入库,支持替换重传) | 按需 |
 
-> 知识库总量:9600+ 文本/图片块 · 16152 条假设问题 · 9079 张图索引 · 2601 件文物 / 409 遗址 / 11 朝代 / 4 窑口(图谱)。数据集目录经环境变量配置(`BRONZE_DATASET_DIR` / `PORCELAIN_DATASET_DIR`)。
-
-## 数据重建(配置)
-
-运行数据(chroma 向量库 / 数据集图片 / 爬取文本 / 上传文档 / 日志)均**不入库**,克隆后按依赖顺序重建:
-
-```bash
-cd backend
-# ① 数据集图片落盘 + 映射表(数据集目录经环境变量配置)
-#    BRONZE_DATASET_DIR / PORCELAIN_DATASET_DIR,默认 datasets/bronze、datasets/porcelain
-uv run python scripts/import_dataset_images.py --source bronze
-uv run python scripts/import_dataset_images.py --source porcelain
-uv run python scripts/import_dataset_images.py --source henan
-
-# ② 文本/图片块入 Chroma
-uv run python scripts/import_bronze_chroma.py
-uv run python scripts/import_porcelain_chroma.py
-uv run python scripts/import_henan_chroma.py
-uv run python scripts/import_henan_image_chunks.py
-
-# ③ 索引:CLIP 图片索引 + 假设性问题索引
-uv run python scripts/import_clip_images.py
-uv run python scripts/generate_questions.py
-
-# ④ 知识图谱(需 Neo4j 运行中)
-uv run python scripts/import_bronze_neo4j.py
-uv run python scripts/import_porcelain_neo4j.py
-uv run python scripts/import_henan_neo4j.py
-```
-
-> 河南博物院文本与图注数据(爬虫脚本不随仓库分发)需自行获取后放入 `backend/src/data/`,再执行 ② 中对应脚本。上传 PDF 走统一入库管道 `python -m ingestion --source X`(含结构感知切分与问题生成)。
+> 知识库总量:9600+ 文本/图片块 · 16152 条假设问题 · 9079 张图索引 · 2601 件文物 / 409 遗址 / 11 朝代 / 4 窑口(图谱)。运行数据不入库,重建脚本见 `backend/scripts/`(数据集目录经环境变量 `BRONZE_DATASET_DIR` / `PORCELAIN_DATASET_DIR` 配置);上传 PDF 走统一入库管道 `python -m ingestion --source X`。
 
 ## 技术栈
 
