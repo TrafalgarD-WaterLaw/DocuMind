@@ -40,17 +40,6 @@ DDD 四层分层(domain / application / infrastructure / interfaces)+ DI 组合�
 | 多模态 | Chinese-CLIP · Qwen-VL(图注) · Docling(PDF 解析) |
 | LLM | DeepSeek(流式 NDJSON,思维链/引用/轨迹事件) |
 
-## 📊 评测数字(2026-08-16)
-
-| 评测面 | 结果 |
-|---|---|
-| pytest 单元测试 | **185 passed** |
-| 检索契约(Recall@8 / MRR) | **28/28 = 100%**,MRR 0.693 |
-| 混合模态(图+文联合检索,AnyHit@8) | **15/15 = 100%** |
-| 文找图(AnyHit@5) | **12/13 = 92%**(1 例为已知釉色视觉混淆,设计内权衡) |
-
-> 另:对 bge-reranker 精排做了完整网格实验,结论为全面退化(Recall -7.1pp / MRR -14%),据实验结论维持禁用——负面结果同样可解释。
-
 ## 🚀 快速开始
 
 ```bash
@@ -67,16 +56,6 @@ pnpm dev
 ```
 
 **本地模型**:BGE / CLIP / reranker 从 ModelScope 缓存加载,默认路径见 `backend/src/core/config.py`(可用环境变量覆盖)。
-
-**评测**(检索/多模态不耗 LLM token):
-
-```bash
-cd backend
-uv run pytest                                    # 185 单测
-uv run python eval/run_eval.py --retrieval-only  # 检索契约 28/28
-uv run python eval/vision_eval.py                # 混合模态 15/15
-uv run python eval/clip_image_eval.py            # 文找图 12/13
-```
 
 ## 📦 数据说明
 
@@ -100,17 +79,8 @@ backend/
     multimodal/    CLIP 图文互检 · 图片证据链 · 资产门面
     ingestion/     入库域(四层):PDF 管道 · 统一 ingest CLI
     documents/     文档管理域:上传任务 · 指纹索引
-  eval/            三面评测契约 + LLM-as-judge
   scripts/         爬取/入库/迁移脚本
-docs/              面试叙事文档 · 架构 ADR · roadmap
 ```
-
-## 📚 文档
-
-- `docs/rag-optimization-blueprint.md` —— RAG 全链路优化蓝图
-- `docs/knowledge-graph-explainer.md` —— 知识图谱方案讲解
-- `docs/roadmap.md` —— 待办与改进索引
-- `CLAUDE.md` —— 完整的架构与约定说明
 
 ## ⚠️ 安全
 

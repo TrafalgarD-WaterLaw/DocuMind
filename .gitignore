@@ -53,3 +53,5 @@ docs/resume.md
 # ── 不公开(本机保留,不入库)──
 /CLAUDE.md
 /docs/
+/backend/tests/
+/backend/eval/
