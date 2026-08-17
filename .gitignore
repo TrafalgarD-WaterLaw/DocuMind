@@ -34,11 +34,7 @@ frontend/dist/
 backend/.venv/
 
 # ── 运行数据(本地生成,不入库)──
-backend/src/data/chroma/
-backend/src/data/images/
-backend/src/data/uploads/
-backend/src/data/logs/
-backend/src/data/document_hashes.json
+/backend/src/data/
 backend/eval/reports/
 
 # ── 开发过程产物 ──
