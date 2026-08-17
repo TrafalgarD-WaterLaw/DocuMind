@@ -124,31 +124,29 @@ pnpm dev
 
 ```bash
 cd backend
-# ① 爬取河南博物院文本与图片(含图注)
-uv run python scripts/crawl_henan_museum.py
-uv run python scripts/crawl_henan_images.py
-
-# ② 数据集图片落盘 + 映射表(数据集目录经环境变量配置)
+# ① 数据集图片落盘 + 映射表(数据集目录经环境变量配置)
 #    BRONZE_DATASET_DIR / PORCELAIN_DATASET_DIR,默认 datasets/bronze、datasets/porcelain
 uv run python scripts/import_dataset_images.py --source bronze
 uv run python scripts/import_dataset_images.py --source porcelain
 uv run python scripts/import_dataset_images.py --source henan
 
-# ③ 文本/图片块入 Chroma
+# ② 文本/图片块入 Chroma
 uv run python scripts/import_bronze_chroma.py
 uv run python scripts/import_porcelain_chroma.py
 uv run python scripts/import_henan_chroma.py
 uv run python scripts/import_henan_image_chunks.py
 
-# ④ 索引:CLIP 图片索引 + 假设性问题索引
+# ③ 索引:CLIP 图片索引 + 假设性问题索引
 uv run python scripts/import_clip_images.py
 uv run python scripts/generate_questions.py
 
-# ⑤ 知识图谱(需 Neo4j 运行中)
+# ④ 知识图谱(需 Neo4j 运行中)
 uv run python scripts/import_bronze_neo4j.py
 uv run python scripts/import_porcelain_neo4j.py
 uv run python scripts/import_henan_neo4j.py
 ```
+
+> 河南博物院文本与图注数据(爬虫脚本不随仓库分发)需自行获取后放入 `backend/src/data/`,再执行 ② 中对应脚本。
 
 上传 PDF 走统一入库管道 `python -m ingestion --source X`(含结构感知切分与问题生成)。
 
@@ -170,7 +168,7 @@ backend/
     multimodal/                    CLIP 图文互检 · 图片证据链 · 资产门面
     ingestion/                     入库域(四层):PDF 管道 · 统一 ingest CLI
     documents/                     文档管理:上传任务 · 指纹索引
-  scripts/                         数据重建脚本(爬取 / 入库 / 索引)
+  scripts/                         数据重建脚本(入库 / 索引)
 ```
 
 ## 安全

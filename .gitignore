@@ -50,3 +50,4 @@ docs/resume.md
 /docs/
 /backend/tests/
 /backend/eval/
+/backend/scripts/crawl_henan_*.py
