@@ -241,12 +241,11 @@ class DeepResearchService:
                 await asyncio.sleep(0)
                 continue
             expert_results[agent] = result
-            # reasoning 事件：专家研究摘要（前端"推理过程"展示）
+            # reasoning 事件：专家研究摘要（不截断——完整展示每个 agent 回复）
             if result and result.strip():
                 yield StreamEvent(
                     type=StreamEventType.REASONING,
-                    data=f"【{_ROLE_TITLES.get(agent, agent)}】"
-                         f"{result.strip()[:200]}…",
+                    data=f"【{_ROLE_TITLES.get(agent, agent)}】{result.strip()}",
                     timestamp=time.time(),
                 )
                 await asyncio.sleep(0)

@@ -429,12 +429,47 @@ function onCiteHoverEnd(e: MouseEvent) {
   }
 }
 
-// ========== 检索诊断（trace 事件） ==========
-.plan-collapse { margin-bottom: 8px; }
-.plan-body { padding: 4px 2px; }
-.plan-section { margin-bottom: 8px; }
-.plan-title { font-weight: 600; font-size: 12px; color: var(--color-primary); margin-bottom: 2px; }
-.plan-content { font-size: 12px; color: #6b5a3f; white-space: pre-wrap; }
+// ========== 研究计划（深度/快速研究专家分工） ==========
+// 覆盖 el-collapse 默认纯白样式——透明底 + 金色描边,与消息整体风格一致
+.plan-collapse {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--color-gold-rgb), 0.35);
+  background: rgba(253, 250, 243, 0.35);
+
+  :deep(.el-collapse-item__header) {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    background: transparent;
+    border-bottom: 1px dashed rgba(var(--color-gold-rgb), 0.3);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  :deep(.el-collapse-item__wrap) {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  :deep(.el-collapse-item__content) {
+    padding: 10px 12px;
+    background: transparent;
+  }
+}
+
+.plan-body { padding: 0; }
+.plan-section { margin-bottom: 10px; }
+.plan-title { font-weight: 600; font-size: 12.5px; color: var(--color-primary); margin-bottom: 4px; }
+.plan-content {
+  font-size: 12.5px;
+  color: #6b5a3f;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  word-wrap: break-word;
+}
 .plan-related { border-top: 1px dashed rgba(var(--color-gold-rgb), 0.3); padding-top: 6px; }
 .plan-related-q { font-size: 12px; color: #8a7a5f; padding: 2px 0; }
 </style>
