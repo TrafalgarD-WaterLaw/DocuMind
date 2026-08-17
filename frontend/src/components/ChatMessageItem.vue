@@ -40,8 +40,9 @@
         </el-collapse-item>
       </el-collapse>
 
-      <!-- Reasoning text -->
-      <div v-if="message.reasoning" class="reasoning-text">
+      <!-- Reasoning text（深度研究消息不显示——专家内容在"研究计划"折叠
+           已展示,正文只留综合报告,避免重复） -->
+      <div v-if="message.reasoning && !message.markdownDict" class="reasoning-text">
         {{ message.reasoning }}
       </div>
 
