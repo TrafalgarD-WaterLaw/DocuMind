@@ -1,5 +1,6 @@
 """著述 Agent——融合多专家结果生成综合研究报告"""
 import logging
+from collections.abc import AsyncGenerator
 
 from interfaces.llm import LLMProvider
 from prompts import render_system, render_user
@@ -36,6 +37,54 @@ class Synthesizer:
         Returns:
             结构化的 Markdown 研究报告
         """
+        messages = await self._prepare_messages(question, expert_results, history, sources)
+        # 偶发空响应/异常统一 llm_call_with_retry 兜底（异常/空响应抖动退避；
+        # 4xx 立即上抛）。失败返回空串——深度研究降级为仅专家分析输出。
+        # max_tokens=8192——默认 4096 会截断长报告（实测在"思维导图"处断掉）
+        try:
+            return await llm_call_with_retry(messages, self.llm, max_tokens=8192)
+        except Exception as e:
+            logger.warning(f"Synthesizer LLM 调用失败，返回空: {e}")
+            return ""
+
+    async def synthesize_stream(
+        self,
+        question: str,
+        expert_results: dict[str, str],
+        history: list[dict] | None = None,
+        sources: list[dict] | None = None,
+    ) -> AsyncGenerator[str, None]:
+        """流式综合报告——chat_stream 逐 token 输出（前端逐字显示）
+
+        流式失败/空流兜底非流式一次返回（max_tokens=8192 防截断）——
+        报告不因流式异常丢失。
+        """
+        messages = await self._prepare_messages(question, expert_results, history, sources)
+        try:
+            got = False
+            async for chunk in self.llm.chat_stream(messages):
+                got = True
+                yield chunk
+            if got:
+                return
+            logger.warning("Synthesizer 流式空流，回退非流式")
+        except Exception as e:
+            logger.warning(f"Synthesizer 流式失败，回退非流式: {e}")
+        try:
+            report = await llm_call_with_retry(messages, self.llm, max_tokens=8192)
+            if report:
+                yield report
+        except Exception as e:
+            logger.warning(f"Synthesizer LLM 调用失败，返回空: {e}")
+
+    async def _prepare_messages(
+        self,
+        question: str,
+        expert_results: dict[str, str],
+        history: list[dict] | None,
+        sources: list[dict] | None,
+    ) -> list[dict]:
+        """拼综合报告消息（synthesize / synthesize_stream 共用）"""
         combined = self._assemble_sections(expert_results)
 
         system_prompt = render_system(
@@ -49,7 +98,7 @@ class Synthesizer:
             history_text += "\n\n"
 
         evidence_text = _build_evidence_text(sources)
-        messages = self.llm.build_messages(
+        return self.llm.build_messages(
             system_prompt,
             render_user(
                 "synthesizer",
@@ -60,14 +109,6 @@ class Synthesizer:
                 max_index=len(sources) if sources else 0,
             ),
         )
-        # 偶发空响应/异常统一 llm_call_with_retry 兜底（异常/空响应抖动退避；
-        # 4xx 立即上抛）。失败返回空串——深度研究降级为仅专家分析输出。
-        # max_tokens=8192——默认 4096 会截断长报告（实测在"思维导图"处断掉）
-        try:
-            return await llm_call_with_retry(messages, self.llm, max_tokens=8192)
-        except Exception as e:
-            logger.warning(f"Synthesizer LLM 调用失败，返回空: {e}")
-            return ""
 
     @staticmethod
     def _assemble_sections(expert_results: dict[str, str]) -> str:

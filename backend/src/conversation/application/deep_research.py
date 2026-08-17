@@ -182,9 +182,7 @@ class DeepResearchService:
             return
         report = report_out[0]
 
-        # 5. 流式输出合成报告（按段落分块流式输出）+ 思维导图 + 收尾
-        async for ev in self._stream_report(report):
-            yield ev
+        # 5. 思维导图 + 收尾（报告已在著述阶段流式输出,不再分段）
         async for ev in self._emit_mindmap(expert_results):
             yield ev
         yield self._expert_event(
@@ -206,7 +204,7 @@ class DeepResearchService:
         """
         # 先发全部 running 事件（前端流水线三专家同时点亮）
         for task in tasks:
-            if self._get_expert(task.agent) is None:
+            if self._expert_factories.get(task.agent) is None:
                 yield self._expert_event(
                     task.agent, "failed", f"专家 {task.agent} 不可用",
                 )
@@ -217,22 +215,25 @@ class DeepResearchService:
             )
             await asyncio.sleep(0)
 
-        async def _run_one(task: AgentTask) -> tuple[str, str, float, str | None]:
+        async def _run_one(task: AgentTask) -> tuple[BaseExpert, str, float, str | None]:
             expert = self._get_expert(task.agent)
             t0 = time.time()
             try:
                 result = await expert.execute(task.query, task.context)
-                return task.agent, result, t0, None
+                # 返回实例本身——_get_expert 每次新建实例,
+                # 重新取会丢 last_sources（证据源全空,报告无引用）
+                return expert, result, t0, None
             except Exception as e:
                 logger.exception(f"专家 {task.agent} 执行失败")
-                return task.agent, "", t0, str(e)
+                return expert, "", t0, str(e)
 
         # asyncio.gather 并行执行——三专家同时跑,总耗时 = 最慢专家
         results = await asyncio.gather(
-            *(_run_one(t) for t in tasks if self._get_expert(t.agent) is not None)
+            *(_run_one(t) for t in tasks if self._expert_factories.get(t.agent) is not None)
         )
-        seen_sources: set[tuple] = set()  # 去重指纹集合（O(n)，替代每轮重建集合）
-        for agent, result, t0, err in results:
+        seen_sources: set[tuple] = set()  # 去重指纹集合（O(n），替代每轮重建集合）
+        for expert, result, t0, err in results:
+            agent = expert.role
             if err:
                 yield self._expert_event(
                     agent, "failed", f"{agent} 分析失败: {err}",
@@ -250,7 +251,7 @@ class DeepResearchService:
                 )
                 await asyncio.sleep(0)
             # 证据锚定：收集专家检索来源（去重后统一全局编号 1..N）
-            expert = self._get_expert(agent)
+            # 用执行时的实例读 last_sources——_get_expert 无缓存,重新取会丢
             for src in getattr(expert, "last_sources", []):
                 key = (src.get("source"), src.get("content"))
                 if key not in seen_sources:
@@ -285,10 +286,22 @@ class DeepResearchService:
         await asyncio.sleep(0)
         yield self._pipeline_event("generate", {"status": "start"})
 
+        # 流式著述——chat_stream 逐 token 发 CONTENT(前端逐字显示);
+        # 失败兜底非流式一次返回(报告不丢)
         try:
-            report = await self._synthesizer.synthesize(
+            parts: list[str] = []
+            async for chunk in self._synthesizer.synthesize_stream(
                 query, expert_results, history, expert_sources
-            )
+            ):
+                if chunk:
+                    parts.append(chunk)
+                    yield StreamEvent(
+                        type=StreamEventType.CONTENT,
+                        data=chunk,
+                        timestamp=time.time(),
+                    )
+                    await asyncio.sleep(0)
+            report = "".join(parts)
         except Exception as e:
             logger.exception("Synthesizer 执行失败")
             yield StreamEvent(
@@ -320,18 +333,6 @@ class DeepResearchService:
             timestamp=time.time(),
         )
         await asyncio.sleep(0)
-
-    async def _stream_report(
-        self, report: str,
-    ) -> AsyncGenerator[StreamEvent, None]:
-        """报告按段落流式输出（每段一条 CONTENT 事件）"""
-        for para in report.split("\n\n"):
-            yield StreamEvent(
-                type=StreamEventType.CONTENT,
-                data=para + "\n\n",
-                timestamp=time.time(),
-            )
-            await asyncio.sleep(0)
 
     async def _emit_mindmap(
         self, expert_results: dict[str, str],
