@@ -233,6 +233,9 @@ export const useChatStore = defineStore('chat', () => {
       id: nanoid(), role: 'assistant', content: '', timestamp: Date.now(), isStreaming: true,
     }
     session.messages.push(assistantMessage)
+    // push 后从响应式数组取回代理引用——直接修改原始对象不触发 Vue 依赖
+    // 通知,流水线/流式内容将不更新（此前 PIPELINE 事件全部静默丢失）
+    const liveMsg = session.messages[session.messages.length - 1]
     persistWithAutoTitle()
 
     isStreaming.value = true
@@ -252,19 +255,19 @@ export const useChatStore = defineStore('chat', () => {
 
       for await (const event of generator) {
         if (controller.signal.aborted) break
-        applyStreamEvent(event, assistantMessage, st)
+        applyStreamEvent(event, liveMsg, st)
       }
     } catch (error) {
       if (!controller.signal.aborted) {
         st.content += `\n\n[Error: ${error instanceof Error ? error.message : String(error)}]`
-        assistantMessage.content = st.content
+        liveMsg.content = st.content
       }
     } finally {
-      if (assistantMessage.isStreaming) {
-        assistantMessage.isStreaming = false
-        assistantMessage.content = st.content
-        assistantMessage.reasoning = st.reasoning || undefined
-        assistantMessage.sources = st.sources.length > 0 ? st.sources : undefined
+      if (liveMsg.isStreaming) {
+        liveMsg.isStreaming = false
+        liveMsg.content = st.content
+        liveMsg.reasoning = st.reasoning || undefined
+        liveMsg.sources = st.sources.length > 0 ? st.sources : undefined
       }
       isStreaming.value = false
       abortController.value = null
