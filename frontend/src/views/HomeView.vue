@@ -23,7 +23,7 @@
         <div class="card-icon"><el-icon :size="28"><ChatDotRound /></el-icon></div>
         <div class="card-body">
           <h3>智能问答</h3>
-          <p>混合检索四路召回 + 证据锚定引用，回答有据可查</p>
+          <p>六路混合检索 + 证据锚定引用，回答有据可查</p>
         </div>
         <div class="card-action">开始问答 →</div>
       </div>
@@ -50,7 +50,7 @@
         <div class="card-icon"><el-icon :size="28"><Picture /></el-icon></div>
         <div class="card-body">
           <h3>图像识别</h3>
-          <p>上传文物图片，零样本识别朝代与器型</p>
+          <p>上传文物图片，CLIP 零样本识别 + 图文联合检索</p>
         </div>
         <div class="card-action">上传识别 →</div>
       </div>

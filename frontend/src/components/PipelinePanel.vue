@@ -41,7 +41,7 @@
       </div>
     </template>
 
-    <!-- 五路检索 -->
+    <!-- 六路检索 -->
     <div
       v-for="p in PATH_ORDER"
       :key="p"
@@ -112,7 +112,7 @@ const props = defineProps<{
   sources?: SourceItem[]
 }>()
 
-// 五路固定顺序与元数据（金棕单色 SVG 线稿图标用 emoji/字符占位，
+// 六路固定顺序与元数据（金棕单色 SVG 线稿图标用 emoji/字符占位，
 // 如需精致图标后续替换为内联 SVG）
 const PATH_ORDER = ['semantic', 'question', 'bm25', 'graph', 'entity', 'clip'] as const
 const PATH_ICONS: Record<string, string> = {
@@ -171,7 +171,7 @@ const isRetrieving = computed(
     props.pipeline.some(s => s.stage === 'rewrite' || s.stage === 'path_done') &&
     !props.pipeline.some(s => s.stage === 'fuse'),
 )
-// 五路串行执行、事件按序到达 → 第一个未 done 的路即当前运行路
+// 六路串行执行、事件按序到达 → 第一个未 done 的路即当前运行路
 const runningPath = computed(() =>
   isRetrieving.value ? PATH_ORDER.find(p => !pathStage(p)) ?? null : null,
 )
