@@ -50,7 +50,8 @@ async def _recognize(
     try:
         from multimodal.clip_retrieval import clip_retriever
 
-        clip_hits = await clip_retriever.image_search(image, top_k=3)
+        # top_k=6——过滤原图本身后仍留同器物其他照片做证据（识别候选仍取前 3）
+        clip_hits = await clip_retriever.image_search(image, top_k=6)
     except Exception as e:
         logger.warning(f"CLIP 图找文失败: {e}")
 
@@ -125,9 +126,14 @@ async def _generate_vision(
 
     # 3. 图片证据归并:image_search 命中 → clip_by_source（识别结果即图片,
     #    SOURCES 证据链自动携带;M2 双 key 归并在 _emit_sources_event 内）
+    #    过滤 score≈1.0 的命中（= 与上传原图同一张,展示无意义）——证据
+    #    展示同器物其他照片;回答内容不受影响（识别名仍取 top1 source）
     clip_by_source: dict[str, list[str]] = {}
     for h in clip_hits:
-        if h.get("source") and h.get("image_path"):
+        if (
+            h.get("source") and h.get("image_path")
+            and float(h.get("score", 0)) < 0.99
+        ):
             clip_by_source.setdefault(h["source"], []).append(h["image_path"])
 
     # 4. 统一编排（与文本问答共用——检索/CRAG/拒答/净化/生成/诊断/兜底）
