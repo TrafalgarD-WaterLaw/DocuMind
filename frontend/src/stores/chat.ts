@@ -73,7 +73,9 @@ function applyStreamEvent(event: StreamEvent, msg: ChatMessage, st: StreamState)
       msg.content = st.content
       break
     case StreamEventType.REASONING:
+      // 实时写入消息——改写/分解/检索阶段用户可见进度，而非流结束后一次性出现
       st.reasoning += String(event.data)
+      msg.reasoning = st.reasoning
       break
     case StreamEventType.SOURCES: {
       const items = (event.data as { items: SourceItem[] }).items

@@ -20,7 +20,9 @@ class DeepSeekProvider(LLMProvider):
         self.client = AsyncOpenAI(
             api_key=api_key,
             base_url=base_url,
-            timeout=httpx.Timeout(connect=10.0, read=300.0, write=60.0, pool=30.0),
+            # 读超时 90s——DeepSeek 偶发挂起时由 llm_call_with_retry 兜底重试,
+            # 而非让请求无限等待（300s 会让页面长时间无反馈）
+            timeout=httpx.Timeout(connect=10.0, read=90.0, write=60.0, pool=30.0),
         )
 
     async def chat(

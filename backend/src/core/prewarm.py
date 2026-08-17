@@ -34,19 +34,25 @@ def prewarm() -> None:
         except Exception as e:
             logger.warning(f"VectorStore init failed (non-fatal): {e}")
 
-        # 懒加载模型（bge embed / bge-reranker / CLIP / BM25）
+        # BM25 先于重模型预热——首问若撞上 BM25 懒构建会阻塞 1 分钟
+        try:
+            from retrieval.bm25 import BM25Index
+
+            # 直接 build（dirty=False 时 rebuild_if_dirty 是空操作,
+            # jieba 分词字典从未预热;build 触发全量分词加载）
+            BM25Index().build(container.vector.get_all_documents())
+            logger.info("BM25Index: ready")
+        except Exception as e:
+            logger.warning(f"BM25 预热失败（首次请求将重建）: {e}")
+
+        # 懒加载重模型（bge embed / bge-reranker / CLIP）
         try:
             _ = container.embedder          # bge 语义向量模型
             _ = container.reranker          # bge-reranker cross-encoder 精排
             from multimodal.clip_retrieval import ClipRetriever
 
             ClipRetriever()._ensure()       # CLIP 图文模型（内部双检锁 + 失败冷却）
-            from retrieval.bm25 import BM25Index
-
-# BM25 真预热——直接 build（dirty=False 时 rebuild_if_dirty
-            # 是空操作，jieba 分词字典从未预热；build 触发全量分词加载）
-            BM25Index().build(container.vector.get_all_documents())
-            logger.info("模型预热完成（embed/reranker/CLIP/BM25 就绪）")
+            logger.info("模型预热完成（embed/reranker/CLIP 就绪）")
         except Exception as e:
             logger.warning(f"模型预热失败（首次请求将重新加载）: {e}")
 
