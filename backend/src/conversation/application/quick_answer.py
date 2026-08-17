@@ -55,16 +55,28 @@ class QuickAnswerService:
         for attempt in (1, 2):
             got_chunk = False
             try:
-                async for chunk in self.llm.chat_stream(messages, usage_tracker=usage):
-                    got_chunk = True
+                agen = self.llm.chat_stream(messages, usage_tracker=usage)
+                # 首 token 45s 超时——DeepSeek 挂起多为不发首 token（读超时
+                # 90s × 2 次重试 = 3 分钟无反馈,演示场景不可接受）;
+                # 首 token 到达后 read=90s 继续兜底后续卡顿
+                try:
+                    first = await asyncio.wait_for(agen.__anext__(), timeout=45)
+                except BaseException:
+                    await agen.aclose()  # 超时/异常时关闭悬挂生成器,防资源泄漏
+                    raise
+                got_chunk = True
+                yield StreamEvent(
+                    type=StreamEventType.CONTENT,
+                    data=first,
+                    timestamp=time.time(),
+                )
+                async for chunk in agen:
                     yield StreamEvent(
                         type=StreamEventType.CONTENT,
                         data=chunk,
                         timestamp=time.time(),
                     )
                     await asyncio.sleep(0)
-                if not got_chunk:
-                    raise ValueError("LLM 空流（0 chunk）")
                 return
             except Exception as e:
                 logger.warning(f"LLM 流式失败（第 {attempt} 次）: {e}")
