@@ -4,7 +4,7 @@ export interface UploadTask {
   task_id: string
   file_name: string
   source: string
-  status: 'queued' | 'parsing' | 'chunking' | 'indexing' | 'questions' | 'done' | 'failed'
+  status: 'queued' | 'parsing' | 'chunking' | 'indexing' | 'questions' | 'done' | 'failed' | 'inconsistent'
   progress: number
   stage_text: string
   error: string

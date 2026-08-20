@@ -397,7 +397,13 @@ class HybridRetriever:
         return best
 
     async def _path_graph(self, query: str) -> list[dict[str, Any]]:
-        """图谱锚定：提取实体 → 查关联 → 扩展查询词补一轮语义检索"""
+        """图谱锚定：提取实体 → 查关联 → 扩展查询词补一轮语义检索
+
+        宽泛实体（朝代）枚举分支：纯文本检索对"春秋有什么青铜器"这类
+        问题召回不足（图谱器物名不在 top-8）——图谱 T3 能精确枚举朝代下
+        全部器物，直接把枚举列表作为图谱证据块进 sources（不再只靠
+        扩展词语义检索，扩展词路径对 563 个关联的朝代枚举失效）。
+        """
         if self.graph is None:
             return []
 
@@ -410,6 +416,43 @@ class HybridRetriever:
             c for c in re.split(r"[、,，/\s]+", entity)
             if c and c not in ("无", "none", "None")
         ]
+
+        # ── 宽泛实体（朝代）枚举分支 ──
+        # "X朝有什么青铜器/文物"：图谱 T3 枚举朝代器物，直接作为证据块。
+        # 判定：实体命中 Era 节点 + 查询含列举意图词。图谱枚举是确定性
+        # 结果（比语义检索更准），且解决"图谱器物进不了 top-8"的召回盲区。
+        list_hint = any(w in query for w in ("什么", "有哪些", "列举", "几种", "几个", "哪些"))
+        broad = [c for c in candidates if self._is_broad_entity(c)]
+        if broad and list_hint:
+            era_name = broad[0]
+            try:
+                rows = await asyncio.to_thread(
+                    self.graph.query,
+                    "MATCH (e:Era {name: $e})<-[:BELONGS_TO]-(a:Artifact) "
+                    "RETURN a.name AS name LIMIT 30",
+                    {"e": era_name},
+                )
+            except Exception as e:
+                logger.warning(f"图谱朝代枚举失败 ({era_name}): {e}")
+                rows = []
+            names = [r["name"] for r in rows if r.get("name")]
+            if names:
+                lines = [f"【图谱】{era_name}相关器物：{n}" for n in names]
+                return [{
+                    "id": f"graph-enum-{era_name}",
+                    "content": "\n".join(lines),
+                    "source": f"图谱: {era_name}",
+                    "score": 0.0,
+                    "metadata": {"source": f"图谱: {era_name}"},
+                    "paths": ["graph"],
+                    "graph_anchor": {
+                        "entity": era_name,
+                        "related": names[:10],
+                        "links": [{"source": era_name, "name": "BELONGS_TO",
+                                   "target": n} for n in names[:10]],
+                    },
+                }]
+
         entity, links = self._resolve_graph_links(candidates)
         if not links:
             return []
@@ -709,6 +752,25 @@ class HybridRetriever:
             candidates = self._apply_rerank(query, candidates)
 
         results = candidates[:top_k]
+        # 图谱枚举块保底（朝代→器物等确定性枚举结果）：RRF 单票分数
+        # （graph 权重 0.5/61）会被语义路挤掉，但它是图谱精确枚举——
+        # 语义检索无法替代，保底附加到结果集（去重后不超过 top_k）。
+        # 不改变其他查询的检索契约（无枚举块时行为不变）。
+        enum_blocks = [
+            d for _, docs in ranked_paths for d in docs
+            if d.get("id", "").startswith("graph-enum-")
+        ]
+        if enum_blocks:
+            existing_ids = {r["id"] for r in results}
+            for eb in enum_blocks:
+                if eb["id"] in existing_ids:
+                    continue
+                # 枚举块保底插入顶部；结果已满 top_k 时挤掉最后一条
+                # （普通文本块——枚举是确定性精确结果，优先级更高）
+                if len(results) >= top_k:
+                    results.pop()
+                results.insert(0, eb)
+                existing_ids.add(eb["id"])
         self._log_completion(results, query, trace)
         return results
 

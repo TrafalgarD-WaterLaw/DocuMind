@@ -15,7 +15,12 @@ from fastapi import APIRouter, BackgroundTasks, File, Form, HTTPException, Uploa
 from fastapi.responses import JSONResponse
 
 from documents.application.task_manager import TaskStatus, UploadTask, task_manager
-from ingestion.application.upload_pipeline import UPLOAD_DIR, _delete_source, _run_pipeline
+from ingestion.application.upload_pipeline import (
+    UPLOAD_DIR,
+    _delete_source,
+    _run_pipeline,
+)
+from core.config import settings
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api", tags=["upload"])
@@ -56,6 +61,17 @@ async def upload_document(
     if ext != ".pdf":
         raise HTTPException(status_code=400, detail=f"暂不支持 {ext} 格式，仅支持 PDF")
 
+    # P2 大小限制：先按 Content-Length 预检（不读文件），读后按实际字节复核——
+    # 客户端可能不送 Content-Length（chunked 传输），预检只是快速失败路径
+    max_size = settings.upload_max_size
+    content_length = file.size if hasattr(file, "size") else None
+    if content_length and content_length > max_size:
+        raise HTTPException(
+            status_code=413,
+            detail=f"文件过大（{content_length} 字节 > 上限 {max_size}），"
+                   f"仅支持 {max_size // (1024 * 1024)}MB 以内 PDF",
+        )
+
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 # 文件名清洗（剥路径组件 + 过滤 URL 特殊字符）后作为 source 前缀
     safe_name = f"{int(time.time())}_{_sanitize_filename(file.filename)}"
@@ -64,6 +80,12 @@ async def upload_document(
     contents = await file.read()
     if not contents:
         raise HTTPException(status_code=400, detail="上传文件为空")
+    if len(contents) > max_size:
+        raise HTTPException(
+            status_code=413,
+            detail=f"文件过大（{len(contents)} 字节 > 上限 {max_size}），"
+                   f"仅支持 {max_size // (1024 * 1024)}MB 以内 PDF",
+        )
 
     # U3 文件去重：SHA-256 指纹 → 已存在则 409 提示（可 replace 覆盖）
     from documents.application.hash_index import find_by_hash

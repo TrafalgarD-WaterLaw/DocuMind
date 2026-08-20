@@ -21,12 +21,15 @@ from core.config import settings
 from core.di import container
 from interfaces.doc_parser import BlockType, DocParser, ParsedDocument
 from ingestion.infrastructure.pypdf_parser import PyPDFParser
-from ingestion.infrastructure.indexer import IndexerService
 from documents.application.task_manager import TaskStatus, UploadTask, task_manager
 
 logger = logging.getLogger(__name__)
 
 UPLOAD_DIR = Path(settings.upload_dir)
+
+# 并发解析信号量（P2）：Docling 版面分析为 CPU/内存重型，同时跑多个会
+# 拖垮单 worker——跨请求共享，超限任务排队等待而不是并发爆炸。
+_parse_semaphore = asyncio.Semaphore(settings.upload_max_concurrency)
 
 
 def _get_parser() -> DocParser:
@@ -219,14 +222,21 @@ def _dedupe_images(
 async def _parse_document(
     task_id: str, file_path: Path, tm: Any, timings: dict[str, float],
 ) -> ParsedDocument:
-    """阶段 1:解析 PDF（Docling 优先;同步解析经 to_thread,不阻塞事件循环）"""
+    """阶段 1:解析 PDF（Docling 优先;同步解析经 to_thread,不阻塞事件循环）
+
+    并发限制：解析是 CPU/内存重型操作，经信号量排队（超限任务等待
+    而不是同时开跑），避免单 worker 被多个大 PDF 拖垮。
+    """
     _t0 = time.perf_counter()
     tm.update_task(task_id, status=TaskStatus.PARSING, progress=10,
-                   stage_text="版面解析中…")
+                   stage_text="排队等待解析资源…")
     parser = _get_parser()
-    parsed: ParsedDocument = await asyncio.to_thread(
-        parser.parse, str(file_path)
-    )
+    async with _parse_semaphore:
+        tm.update_task(task_id, status=TaskStatus.PARSING, progress=10,
+                       stage_text="版面解析中…")
+        parsed: ParsedDocument = await asyncio.to_thread(
+            parser.parse, str(file_path)
+        )
     tm.update_task(task_id, progress=40,
                    pages=parsed.metadata.get("pages", 0),
                    blocks=_count_blocks(parsed))
@@ -237,43 +247,46 @@ async def _parse_document(
 async def _split_chunks(
     parsed: ParsedDocument, source: str, chunk_size: int, chunk_overlap: int,
 ) -> tuple[list[dict], list[dict]]:
-    """分块:Docling 块流 → 结构感知父子切分;无块流回退 langchain 通用切分"""
-    if getattr(parsed, "blocks", None):
-        from ingestion.infrastructure.chunker import chunk_document
+    """分块:统一走结构感知父子切分（Docling 块流 / 回退文本流）
 
-        # 同步切分(句子边界/父子构造,秒级)——to_thread 不阻塞事件循环
-        cr = await asyncio.to_thread(chunk_document, parsed, source=source)
-        return cr.children, cr.parents
-    indexer = IndexerService()
-    chunks = indexer.load_chunks_from_text(
-        parsed.markdown,
-        source=source,
-        chunk_size=chunk_size or settings.chunk_size,
-        chunk_overlap=chunk_overlap or settings.chunk_overlap,
-    )
-    children = [
-        {
-            "chunk_id": str(uuid.uuid4()),
-            "content": c.page_content,
-            "metadata": {**c.metadata, "chunk_type": "text"},
-        }
-        for c in chunks
-    ]
-    return children, []
+    P5 修复：统一父子分块契约——所有解析器（Docling/PyPDF）都产出
+    DocumentBlock 流，直接走 chunk_document 的父子切分。此前存在一条
+    langchain 500 字硬切且无父块的兜底路径（同一系统两种检索质量），
+    已移除；blocks 为空（空 PDF/纯图片扫描件无文本）时返回空并告警，
+    由上游对账（P1）标记入库不完整，而不是静默产出无父子结构的数据。
+
+    chunk_size/chunk_overlap 参数保留以兼容前端 Form 传递，实际切分
+    参数由 chunker 默认值接管（max_child_chars=250 / max_parent_chars=1500，
+    与 settings.context_block_chars 对齐）。
+    """
+    from ingestion.infrastructure.chunker import chunk_document
+
+    if not getattr(parsed, "blocks", None):
+        logger.warning(
+            f"解析结果无文本块（空 PDF/纯图片扫描件无 OCR 文本?）: "
+            f"{parsed.source} — 返回空分块，由入库对账标记不完整"
+        )
+        return [], []
+    # 同步切分(句子边界/父子构造,秒级)——to_thread 不阻塞事件循环
+    cr = await asyncio.to_thread(chunk_document, parsed, source=source)
+    return cr.children, cr.parents
 
 
 async def _build_image_chunks_with_captions(
     task_id: str, parsed: ParsedDocument, source: str, tm: Any,
-) -> list[dict]:
+) -> tuple[list[dict], int]:
     """图片 → 入库块:VLM 描述(并行限流 3)→ 内容去重 → 图注配对 → 块
 
-    返回图片块列表;无图片返回空。VLM 描述按去重后的原始索引对齐合并。
+    返回 (图片块列表, VLM 描述失败数)——失败不再静默：Qwen-VL 调用
+    失败/无 key 降级时计数返回，调用方在任务状态标注"图片描述不完整"，
+    用户可见而非默默吞掉。
     """
     if not getattr(parsed, "images", None):
-        return []
+        return [], 0
     from multimodal.image_caption import NoopCaptioner
 
-    if not isinstance(container.captioner, NoopCaptioner):
+    captioner_is_noop = isinstance(container.captioner, NoopCaptioner)
+    if not captioner_is_noop:
         tm.update_task(task_id, progress=47, stage_text="生成图片描述中…")
     sem = asyncio.Semaphore(3)
 
@@ -284,6 +297,16 @@ async def _build_image_chunks_with_captions(
     cap_results = await asyncio.gather(
         *[_caption_one(img) for img in parsed.images]
     )
+    # 失败计数：Noop 降级（无 key）或调用返回空 = 未得到真实描述
+    n_failed = sum(
+        1 for r in cap_results if not (r or "").strip()
+    )
+    if n_failed and captioner_is_noop:
+        logger.warning(
+            f"图片描述降级: 无视觉模型 key，{n_failed} 张图片用占位内容"
+        )
+    elif n_failed:
+        logger.warning(f"图片描述失败: {n_failed}/{len(parsed.images)} 张未得到描述")
     # 页码从 Docling 导出文件名解析真实页码(fig_{page}_{n}.png)
     page_of: dict[str, int] = {}
     for img in parsed.images:
@@ -314,7 +337,7 @@ async def _build_image_chunks_with_captions(
         if orig < len(cap_results) and cap_results[orig]:
             if f"。{cap_results[orig]}" not in chunk["content"]:
                 chunk["content"] += f"。{cap_results[orig]}"
-    return image_chunks
+    return image_chunks, n_failed
 
 
 async def _build_doc_dicts(
@@ -349,10 +372,14 @@ async def _build_doc_dicts(
         }
         for p in parent_chunks
     )
-    image_chunks = await _build_image_chunks_with_captions(
+    image_chunks, caption_failed = await _build_image_chunks_with_captions(
         task_id, parsed, source, tm
     )
     doc_dicts.extend(image_chunks)
+    # 图片描述失败数（P3）：>0 时收尾阶段在任务状态标注，用户可见
+    # （不再静默降级为文件名占位）
+    if caption_failed:
+        logger.warning(f"图片描述不完整: {caption_failed} 张降级为占位内容 ({source})")
     # 文档级元数据:所有块携带文档身份(检索过滤/展示维度)
     doc_meta = {
         "file_name": file_name,
@@ -361,7 +388,7 @@ async def _build_doc_dicts(
     }
     for d in doc_dicts:
         d["metadata"].update(doc_meta)
-    return doc_dicts, image_chunks
+    return doc_dicts, image_chunks, caption_failed
 
 
 async def _extract_doc_entities(file_name: str, doc_dicts: list[dict]) -> None:
@@ -471,7 +498,7 @@ async def _run_pipeline(
         parsed = await _parse_document(task_id, file_path, tm, timings)
 
         # 2. 分块 + 图片块 + 文档元数据
-        doc_dicts, image_chunks = await _build_doc_dicts(
+        doc_dicts, image_chunks, caption_failed = await _build_doc_dicts(
             task_id, parsed, source, file_name, file_path,
             chunk_size, chunk_overlap, tm,
         )
@@ -495,7 +522,7 @@ async def _run_pipeline(
         # 7. 收尾:CLIP 增量(await 同步,失败提示图找文不完整)+ 指纹登记
         await _finish_pipeline(
             task_id, source, image_chunks, sha256, questions_failed,
-            total_chunks, file_name, tm, timings,
+            total_chunks, file_name, tm, timings, caption_failed,
         )
     except Exception as e:
         _cleanup_failed_pipeline(task_id, source, file_path, e, tm)
@@ -529,15 +556,44 @@ def _replace_old_sources(file_name: str) -> None:
 async def _finish_pipeline(
     task_id: str, source: str, image_chunks: list[dict], sha256: str,
     questions_failed: bool, total_chunks: int, file_name: str,
-    tm: Any, timings: dict[str, float],
+    tm: Any, timings: dict[str, float], caption_failed: int = 0,
 ) -> None:
-    """阶段 7 收尾:CLIP 增量(await 同步,失败提示图找文不完整)+ 指纹登记"""
+    """阶段 7 收尾:CLIP 增量(await 同步,失败提示图找文不完整)+ 指纹登记
+
+    入库对账（P1）：任务完成前核对 Chroma 实际块数 == 期望块数。
+    进程中途被杀/向量化部分失败时，块数不符 → 标记 INCONSISTENT，
+    前端提示"数据可能不完整"，而不是静默显示成功。
+
+    图片描述失败（P3）：caption_failed > 0 时 stage_text 标注
+    "图片描述不完整 N 张"，用户可见而非静默降级。
+    """
+    # 对账：期望块数 = 文本块（子+父）+ 图片块；实际 = Chroma 按 source 计数
+    # （#图 后缀是独立 source，需分别计数）
+    expected = total_chunks
+    actual = 0
+    try:
+        actual = container.vector.count_by_source(source)
+        actual += container.vector.count_by_source(f"{source}#图")
+    except Exception as e:
+        logger.warning(f"入库对账失败（跳过，按成功处理）: {e}")
     clip_ok = await _post_ingest(source, image_chunks, sha256)
+    if actual != expected:
+        stage_text = (
+            f"入库不完整（期望 {expected} 块，实际 {actual} 块）"
+            if questions_failed else
+            f"入库不完整（期望 {expected} 块，实际 {actual} 块），问题生成失败"
+        )
+        tm.update_task(task_id, status=TaskStatus.INCONSISTENT, progress=100,
+                       stage_text=stage_text, error=stage_text, timings=timings)
+        logger.error(f"入库对账不一致: {file_name} 期望 {expected} 实际 {actual}")
+        return
     stage_text = (
         "问题生成失败，文档已可检索" if questions_failed
         else "CLIP 增量失败，图找文不完整" if not clip_ok
         else "入库完成"
     )
+    if caption_failed:
+        stage_text += f"（图片描述不完整 {caption_failed} 张）"
     tm.update_task(task_id, status=TaskStatus.DONE, progress=100,
                    stage_text=stage_text, timings=timings)
     logger.info(f"上传管线完成: {file_name} ({total_chunks} chunks) "

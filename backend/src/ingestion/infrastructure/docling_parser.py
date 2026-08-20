@@ -63,12 +63,14 @@ class DoclingParser(DocParser):
             from core.config import settings
 
             if settings.docling_ocr and "do_ocr" in fields:
-                opts.do_ocr = True
                 try:
                     from docling.datamodel.pipeline_options import EasyOcrOptions
 
+                    opts.do_ocr = True
                     opts.ocr_options = EasyOcrOptions()
                 except ImportError:
+                    # easyocr 未安装 → 明确关闭 OCR 并告警（不留无效配置）
+                    opts.do_ocr = False
                     import logging
 
                     logging.getLogger(__name__).warning(

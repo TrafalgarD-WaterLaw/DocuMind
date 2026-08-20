@@ -32,6 +32,9 @@ class TaskStatus(StrEnum):
     QUESTIONS = "questions"
     DONE = "done"
     FAILED = "failed"
+    # 入库对账不一致：任务声称完成但 Chroma 实际块数与期望不符
+    # （进程中途被杀 / 向量化部分失败等），前端据此提示"数据可能不完整"
+    INCONSISTENT = "inconsistent"
 
 
 @dataclass

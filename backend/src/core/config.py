@@ -21,7 +21,9 @@ class Settings(BaseSettings):
     image_caption_model: str = "qwen-vl-max-latest"
 
     # ── Neo4j 图谱 ──
-    neo4j_uri: str = "bolt://localhost:7687"
+    # 显式 127.0.0.1 而非 localhost——Windows 上 localhost 常解析为 IPv6
+    # (::1)，而 Neo4j 默认只监听 IPv4，导致连接被拒
+    neo4j_uri: str = "bolt://127.0.0.1:7687"
     neo4j_user: str = "neo4j"
     neo4j_password: str = ""
 
@@ -99,8 +101,13 @@ class Settings(BaseSettings):
     chunk_overlap: int = 50
 
     # ── 文档解析 ──
-    # 扫描件 OCR（需 easyocr 依赖；默认关避免依赖膨胀——电子 PDF 无需 OCR）
-    docling_ocr: bool = False
+    # 扫描件 OCR：默认开启——文物/古籍领域扫描件 PDF 常见，Docling 在
+    # easyocr 未安装时自动降级（warning 提示，不阻塞电子 PDF 解析）
+    docling_ocr: bool = True
+    # 上传限制（P2 资源上限）——单文件大小上限（字节，默认 100MB）与
+    # 并发解析任务上限（Docling 版面分析为 CPU/内存重型，超限排队）
+    upload_max_size: int = 100 * 1024 * 1024
+    upload_max_concurrency: int = 2
 
     model_config = {
         "env_file": ".env",

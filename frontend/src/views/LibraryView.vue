@@ -46,7 +46,7 @@
             <span class="task-name" :title="t.file_name">{{ t.file_name }}</span>
             <span class="task-badge" :class="'badge-' + t.status">{{ statusLabel(t.status) }}</span>
           </div>
-          <div v-if="t.status !== 'done' && t.status !== 'failed'" class="task-progress">
+          <div v-if="t.status !== 'done' && t.status !== 'failed' && t.status !== 'inconsistent'" class="task-progress">
             <el-progress :percentage="t.progress" :stroke-width="6" :color="'#c9a96e'" />
             <p class="task-stage">{{ t.stage_text }}</p>
           </div>
@@ -54,6 +54,13 @@
           <div v-if="t.status === 'failed'" class="task-retry-line">
             <el-button size="small" type="primary" plain @click="retryTask(t)">重新上传</el-button>
             <span class="task-retry-hint">解析失败任务可重新选择文件上传</span>
+          </div>
+          <p v-if="t.status === 'inconsistent'" class="task-error">
+            {{ t.stage_text || '入库不完整，数据可能缺失，建议删除后重新上传' }}
+          </p>
+          <div v-if="t.status === 'inconsistent'" class="task-retry-line">
+            <el-button size="small" type="primary" plain @click="retryTask(t)">重新上传</el-button>
+            <span class="task-retry-hint">入库不完整任务建议重新上传</span>
           </div>
           <div v-if="t.status === 'done'" class="task-done-line">
             {{ t.chunks }} 个切片 · {{ t.pages }} 页
@@ -115,6 +122,7 @@ const hasActive = computed(() => queue.value.some(t => ACTIVE_STATUSES.has(t.sta
 const STATUS_LABELS: Record<string, string> = {
   queued: '排队中', parsing: '版面解析', chunking: '智能分块',
   indexing: '向量入库', questions: '生成问题', done: '完成', failed: '失败',
+  inconsistent: '入库不完整',
 }
 function statusLabel(s: string): string { return STATUS_LABELS[s] || s }
 
